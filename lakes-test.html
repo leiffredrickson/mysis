@@ -1,7 +1,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <script src="datamaps.usa.min.js"></script>
-<script src="mysis-updated.geojson"></script>
+<script src="mysis-updated-test.geojson"></script>
 <div id="container" style="position: relative; width: 1500px; height: 750px;"></div>
 <script>
 /* Notes with this version:
@@ -20,20 +20,20 @@ var points = [];
 // allData.features.forEach loop through all of the objects in the features object only
 allData.features.forEach(function(curVal, index, array) {
   // Grab the origin values and set to a variable
-  var originLat = curVal.geometry.coordinates[1];
-  var originLon = curVal.geometry.coordinates[0];
+  var destinationLat = curVal.geometry.coordinates[1];
+  var destinationLon = curVal.geometry.coordinates[0];
 
   // Grab the source lat/long and store as variable
-  var sourceLat = parseFloat(curVal.properties.Latitude_Source);
-  var sourceLon = parseFloat(curVal.properties.Longitude_Source);
+  var sourceLat = curVal.properties.Latitude_Source;
+  var sourceLon = curVal.properties.Longitude_Source;
 
   // this creates an object containing the origin and destination lat/longs, and then puts that into the points array created earlier.
   points.push({
-    origin: {
-      latitude: originLat,
-      longitude: originLon
-    },
     destination: {
+      latitude: destinationLat,
+      longitude: destinationLon
+    },
+    origin: {
       latitude: sourceLat,
       longitude: sourceLon
     }
