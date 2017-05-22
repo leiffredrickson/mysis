@@ -17,7 +17,7 @@ allData = {
        "Longitude_Source":-105.81,
        "Latitude_Source":40.24,
        "Year":1980,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -57,7 +57,7 @@ allData = {
        "Longitude_Source":-105.81,
        "Latitude_Source":40.24,
        "Year":1980,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -77,7 +77,7 @@ allData = {
        "Longitude_Source":-105.81,
        "Latitude_Source":40.24,
        "Year":1980,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -97,7 +97,7 @@ allData = {
        "Longitude_Source":-105.81,
        "Latitude_Source":40.24,
        "Year":1980,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -117,7 +117,7 @@ allData = {
        "Longitude_Source":-119.54,
        "Latitude_Source":49.83,
        "Year":1990,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -137,7 +137,7 @@ allData = {
        "Longitude_Source":-119.54,
        "Latitude_Source":49.83,
        "Year":1980,
-       "Amount":
+       "Amount":null
        }
      },
      {
@@ -157,7 +157,7 @@ allData = {
        "Longitude_Source":-114.38,
        "Latitude_Source":48.45,
        "Year":1981,
-       "Amount":
+       "Amount":null
        }
      },
   {
@@ -3999,5 +3999,6 @@ allData = {
     "Year":1968,
     "Amount":4250
     }
+  }
   ]
 }
