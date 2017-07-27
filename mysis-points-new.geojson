@@ -1,0 +1,4005 @@
+data = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -105.22,40.34 ]
+       },
+       "properties": {
+       "JoinID":1003,
+       "FID":15,
+       "Lake Name":"Carter Lake Reservoir",
+       "State_Province":"Colorado",
+       "Introduction_Mode":"Intermountain diversions",
+       "Introduction_Number":1,
+       "Source":"Grand Lake",
+       "Longitude_Source":-105.81,
+       "Latitude_Source":40.24,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -105.16,40.56 ]
+       },
+       "properties": {
+       "JoinID":1004,
+       "FID":58,
+       "Lake Name":"Horsetooth Reservoir",
+       "State_Province":"Colorado",
+       "Introduction_Mode":"Intermountain diversions",
+       "Introduction_Number":1,
+       "Source":"Grand Lake",
+       "Longitude_Source":-105.81,
+       "Latitude_Source":40.24,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -105.5,40.38 ]
+       },
+       "properties": {
+       "JoinID":1005,
+       "FID":73,
+       "Lake Name":"Lake Estes",
+       "State_Province":"Colorado",
+       "Introduction_Mode":"Intermountain diversions",
+       "Introduction_Number":1,
+       "Source":"Grand Lake",
+       "Longitude_Source":-105.81,
+       "Latitude_Source":40.24,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -104.86,39.82 ]
+       },
+       "properties": {
+       "JoinID":1006,
+       "FID":87,
+       "Lake Name":"Mary Lake",
+       "State_Province":"Colorado",
+       "Introduction_Mode":"Intermountain diversions",
+       "Introduction_Number":1,
+       "Source":"Grand Lake",
+       "Longitude_Source":-105.81,
+       "Latitude_Source":40.24,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -105.84,40.23 ]
+       },
+       "properties": {
+       "JoinID":1007,
+       "FID":116,
+       "Lake Name":"Shadow Mountain Lake",
+       "State_Province":"Colorado",
+       "Introduction_Mode":"Intermountain diversions",
+       "Introduction_Number":1,
+       "Source":"Grand Lake",
+       "Longitude_Source":-105.81,
+       "Latitude_Source":40.24,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -119.44,48.99 ]
+       },
+       "properties": {
+       "JoinID":1083,
+       "FID":99,
+       "Lake Name":"Osoyoos Lake",
+       "State_Province":"British Columbia",
+       "Introduction_Mode":"Downstream drift",
+       "Introduction_Number":1,
+       "Source":"Okanagan Lake",
+       "Longitude_Source":-119.54,
+       "Latitude_Source":49.83,
+       "Year":1990,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -119.59,49.41 ]
+       },
+       "properties": {
+       "JoinID":1085,
+       "FID":119,
+       "Lake Name":"Skaha Lake",
+       "State_Province":"British Columbia",
+       "Introduction_Mode":"Downstream drift",
+       "Introduction_Number":1,
+       "Source":"Okanagan Lake",
+       "Longitude_Source":-119.54,
+       "Latitude_Source":49.83,
+       "Year":1980,
+       "Amount":null
+       }
+     },
+     {
+       "type": "Feature",
+       "geometry": {
+          "type": "Point",
+          "coordinates":  [ -114.1,47.88 ]
+       },
+       "properties": {
+       "JoinID":1208,
+       "FID":42,
+       "Lake Name":"Flathead Lake",
+       "State_Province":"Montana",
+       "Introduction_Mode":"Downstream drift",
+       "Introduction_Number":1,
+       "Source":"Whitefish Lake",
+       "Longitude_Source":-114.38,
+       "Latitude_Source":48.45,
+       "Year":1981,
+       "Amount":null
+       }
+     },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.5,51.81 ]
+    },
+    "properties": {
+    "JoinID":1000,
+    "FID":69,
+    "Lake Name":"Lac La Hache",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Canim Lake",
+    "Longitude_Source":-120.75,
+    "Latitude_Source":51.86,
+    "Year":1975,
+    "Amount":30000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.5,51.81 ]
+    },
+    "properties": {
+    "JoinID":1001,
+    "FID":null,
+    "Lake Name":"Lac La Hache",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Canim Lake",
+    "Longitude_Source":-120.75,
+    "Latitude_Source":51.86,
+    "Year":1976,
+    "Amount":200000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.33,39.08 ]
+    },
+    "properties": {
+    "JoinID":1002,
+    "FID":134,
+    "Lake Name":"Twin Lakes Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Clearwater Lake",
+    "Longitude_Source":-94.1,
+    "Latitude_Source":45.29,
+    "Year":1957,
+    "Amount":750
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.2,37.24 ]
+    },
+    "properties": {
+    "JoinID":1008,
+    "FID":59,
+    "Lake Name":"Huntington Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Green Lake",
+    "Longitude_Source":-105.81,
+    "Latitude_Source":40.24,
+    "Year":1963,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.86,43.91 ]
+    },
+    "properties": {
+    "JoinID":1009,
+    "FID":null,
+    "Lake Name":"Alturas Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-105.81,
+    "Latitude_Source":40.24,
+    "Year":1967,
+    "Amount":60000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.86,43.91 ]
+    },
+    "properties": {
+    "JoinID":1010,
+    "FID":null,
+    "Lake Name":"Alturas Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-105.81,
+    "Latitude_Source":40.24,
+    "Year":1968,
+    "Amount":42000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.36,43.4 ]
+    },
+    "properties": {
+    "JoinID":1011,
+    "FID":null,
+    "Lake Name":"Anderson Ranch Reservoir",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-105.81,
+    "Latitude_Source":40.24,
+    "Year":1966,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.36,43.4 ]
+    },
+    "properties": {
+    "JoinID":1012,
+    "FID":null,
+    "Lake Name":"Anderson Ranch Reservoir",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-105.81,
+    "Latitude_Source":40.24,
+    "Year":1967,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -124.64,49.29 ]
+    },
+    "properties": {
+    "JoinID":1013,
+    "FID":12,
+    "Lake Name":"Cameron Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1973,
+    "Amount":150000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.75,51.86 ]
+    },
+    "properties": {
+    "JoinID":1014,
+    "FID":13,
+    "Lake Name":"Canim Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":325000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.75,51.86 ]
+    },
+    "properties": {
+    "JoinID":1015,
+    "FID":null,
+    "Lake Name":"Canim Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":300000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.25,49.11 ]
+    },
+    "properties": {
+    "JoinID":1016,
+    "FID":21,
+    "Lake Name":"Christina Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":80000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.8,47.54 ]
+    },
+    "properties": {
+    "JoinID":1017,
+    "FID":24,
+    "Lake Name":"Coeur D Alene Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":200000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.8,47.54 ]
+    },
+    "properties": {
+    "JoinID":1018,
+    "FID":null,
+    "Lake Name":"Coeur D Alene Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.8,47.54 ]
+    },
+    "properties": {
+    "JoinID":1019,
+    "FID":null,
+    "Lake Name":"Coeur D Alene Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.64,49.63 ]
+    },
+    "properties": {
+    "JoinID":1020,
+    "FID":27,
+    "Lake Name":"Crowsnest Lake",
+    "State_Province":"Alberta",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1973,
+    "Amount":75000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.97,50.39 ]
+    },
+    "properties": {
+    "JoinID":1021,
+    "FID":38,
+    "Lake Name":"Duncan Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1975,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.31,50.19 ]
+    },
+    "properties": {
+    "JoinID":1022,
+    "FID":65,
+    "Lake Name":"Kalamalka Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1965,
+    "Amount":145000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.31,50.19 ]
+    },
+    "properties": {
+    "JoinID":1023,
+    "FID":null,
+    "Lake Name":"Kalamalka Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1966,
+    "Amount":95000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.35,48.03 ]
+    },
+    "properties": {
+    "JoinID":1024,
+    "FID":72,
+    "Lake Name":"Lake Chelan",
+    "State_Province":"Washington",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":500000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.35,48.03 ]
+    },
+    "properties": {
+    "JoinID":1025,
+    "FID":null,
+    "Lake Name":"Lake Chelan",
+    "State_Province":"Washington",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":500000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.35,48.03 ]
+    },
+    "properties": {
+    "JoinID":1026,
+    "FID":null,
+    "Lake Name":"Lake Chelan",
+    "State_Province":"Washington",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1971,
+    "Amount":500000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.33,48.18 ]
+    },
+    "properties": {
+    "JoinID":1027,
+    "FID":null,
+    "Lake Name":"Lake Pend Oreille",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":210000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.33,48.18 ]
+    },
+    "properties": {
+    "JoinID":1028,
+    "FID":null,
+    "Lake Name":"Lake Pend Oreille",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":300000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.07,49.42 ]
+    },
+    "properties": {
+    "JoinID":1029,
+    "FID":84,
+    "Lake Name":"Lower Arrow Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1974,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.14,50.65 ]
+    },
+    "properties": {
+    "JoinID":1030,
+    "FID":86,
+    "Lake Name":"Lower Kananaskis Lake",
+    "State_Province":"Alberta",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.84,49.33 ]
+    },
+    "properties": {
+    "JoinID":1031,
+    "FID":93,
+    "Lake Name":"Moyie Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1970,
+    "Amount":250000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.54,49.83 ]
+    },
+    "properties": {
+    "JoinID":1032,
+    "FID":97,
+    "Lake Name":"Okanagan Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1966,
+    "Amount":240000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -113.58,47.69 ]
+    },
+    "properties": {
+    "JoinID":1033,
+    "FID":101,
+    "Lake Name":"Palisades Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":40000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.11,43.23 ]
+    },
+    "properties": {
+    "JoinID":1034,
+    "FID":102,
+    "Lake Name":"Palisades Reservoir",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":115500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.11,43.23 ]
+    },
+    "properties": {
+    "JoinID":1035,
+    "FID":null,
+    "Lake Name":"Palisades Reservoir",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":210000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.09,44.95 ]
+    },
+    "properties": {
+    "JoinID":1036,
+    "FID":null,
+    "Lake Name":"Payette Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.09,44.95 ]
+    },
+    "properties": {
+    "JoinID":1037,
+    "FID":null,
+    "Lake Name":"Payette Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":94500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.88,43.98 ]
+    },
+    "properties": {
+    "JoinID":1038,
+    "FID":106,
+    "Lake Name":"Pettit Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":40000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.59,50.43 ]
+    },
+    "properties": {
+    "JoinID":1039,
+    "FID":108,
+    "Lake Name":"Pinaus Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1965,
+    "Amount":80000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.59,50.43 ]
+    },
+    "properties": {
+    "JoinID":1040,
+    "FID":null,
+    "Lake Name":"Pinaus Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1966,
+    "Amount":90000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.87,48.59 ]
+    },
+    "properties": {
+    "JoinID":1041,
+    "FID":null,
+    "Lake Name":"Priest Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":300000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.93,44.12 ]
+    },
+    "properties": {
+    "JoinID":1042,
+    "FID":112,
+    "Lake Name":"Redfish Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1966,
+    "Amount":50000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.93,44.12 ]
+    },
+    "properties": {
+    "JoinID":1043,
+    "FID":null,
+    "Lake Name":"Redfish Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":60000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.93,44.12 ]
+    },
+    "properties": {
+    "JoinID":1044,
+    "FID":null,
+    "Lake Name":"Redfish Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":52500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.43,49.88 ]
+    },
+    "properties": {
+    "JoinID":1045,
+    "FID":120,
+    "Lake Name":"Slocan Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1973,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.43,49.88 ]
+    },
+    "properties": {
+    "JoinID":1046,
+    "FID":null,
+    "Lake Name":"Slocan Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1974,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.06,44.24 ]
+    },
+    "properties": {
+    "JoinID":1047,
+    "FID":null,
+    "Lake Name":"Stanley Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":40000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.06,44.24 ]
+    },
+    "properties": {
+    "JoinID":1048,
+    "FID":null,
+    "Lake Name":"Stanley Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":31500
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.84,50.25 ]
+    },
+    "properties": {
+    "JoinID":1049,
+    "FID":135,
+    "Lake Name":"Upper Arrow Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.84,50.25 ]
+    },
+    "properties": {
+    "JoinID":1050,
+    "FID":null,
+    "Lake Name":"Upper Arrow Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1974,
+    "Amount":500000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.16,50.62 ]
+    },
+    "properties": {
+    "JoinID":1051,
+    "FID":137,
+    "Lake Name":"Upper Kananaskis Lake",
+    "State_Province":"Alberta",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1967,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.02,45.13 ]
+    },
+    "properties": {
+    "JoinID":1052,
+    "FID":138,
+    "Lake Name":"Upper Payette Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":75000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.89,48.78 ]
+    },
+    "properties": {
+    "JoinID":1053,
+    "FID":139,
+    "Lake Name":"Upper Priest Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1968,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.89,48.78 ]
+    },
+    "properties": {
+    "JoinID":1054,
+    "FID":null,
+    "Lake Name":"Upper Priest Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.67,44.64 ]
+    },
+    "properties": {
+    "JoinID":1055,
+    "FID":142,
+    "Lake Name":"Warm Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1969,
+    "Amount":75000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.09,49.97 ]
+    },
+    "properties": {
+    "JoinID":1056,
+    "FID":144,
+    "Lake Name":"Whatshan Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1974,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -119.38,50.1 ]
+    },
+    "properties": {
+    "JoinID":1057,
+    "FID":149,
+    "Lake Name":"Wood Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Kootenay Lake",
+    "Longitude_Source":-116.87,
+    "Latitude_Source":49.6,
+    "Year":1966,
+    "Amount":90000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.08,45.75 ]
+    },
+    "properties": {
+    "JoinID":1058,
+    "FID":46,
+    "Lake Name":"Fourth Debsconeag Lake",
+    "State_Province":"Maine",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Lake Memphremagog",
+    "Longitude_Source":-72.22,
+    "Latitude_Source":44.98,
+    "Year":1975,
+    "Amount":15000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -68.26,44.33 ]
+    },
+    "properties": {
+    "JoinID":1059,
+    "FID":64,
+    "Lake Name":"Jordan Pond",
+    "State_Province":"Maine",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Lake Memphremagog",
+    "Longitude_Source":-72.22,
+    "Latitude_Source":44.98,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -68.26,44.33 ]
+    },
+    "properties": {
+    "JoinID":1060,
+    "FID":null,
+    "Lake Name":"Jordan Pond",
+    "State_Province":"Maine",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Lake Memphremagog",
+    "Longitude_Source":-72.22,
+    "Latitude_Source":44.98,
+    "Year":1975,
+    "Amount":15000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -69.67,45.54 ]
+    },
+    "properties": {
+    "JoinID":1061,
+    "FID":92,
+    "Lake Name":"Moosehead Lake",
+    "State_Province":"Maine",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Lake Memphremagog",
+    "Longitude_Source":-72.22,
+    "Latitude_Source":44.98,
+    "Year":1975,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.68,35.18 ]
+    },
+    "properties": {
+    "JoinID":1062,
+    "FID":94,
+    "Lake Name":"Nantahala Lake",
+    "State_Province":"North Carolina",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Lake Michigan",
+    "Longitude_Source":-87.23,
+    "Latitude_Source":43.24,
+    "Year":1970,
+    "Amount":70000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.85,48.23 ]
+    },
+    "properties": {
+    "JoinID":1063,
+    "FID":11,
+    "Lake Name":"Bull Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":6000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.82,48.71 ]
+    },
+    "properties": {
+    "JoinID":1064,
+    "FID":34,
+    "Lake Name":"Dickey Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":2000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -113.61,47.45 ]
+    },
+    "properties": {
+    "JoinID":1065,
+    "FID":150,
+    "Lake Name":"Holland Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1976,
+    "Amount":8000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.12,48.25 ]
+    },
+    "properties": {
+    "JoinID":1066,
+    "FID":71,
+    "Lake Name":"Lake Blaine",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":5000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.07,48.03 ]
+    },
+    "properties": {
+    "JoinID":1067,
+    "FID":89,
+    "Lake Name":"Middle Thompson Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":14000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.95,48.26 ]
+    },
+    "properties": {
+    "JoinID":1068,
+    "FID":121,
+    "Lake Name":"Spar Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -113.88,47.94 ]
+    },
+    "properties": {
+    "JoinID":1069,
+    "FID":126,
+    "Lake Name":"Swan Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":14000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.56,48.41 ]
+    },
+    "properties": {
+    "JoinID":1070,
+    "FID":127,
+    "Lake Name":"Tally Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"McGregor Lake  ",
+    "Longitude_Source":-114.83,
+    "Latitude_Source":48.03,
+    "Year":1975,
+    "Amount":2000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.83,49.86 ]
+    },
+    "properties": {
+    "JoinID":1071,
+    "FID":49,
+    "Lake Name":"Grave Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Moyie Lake",
+    "Longitude_Source":-115.84,
+    "Latitude_Source":49.33,
+    "Year":1979,
+    "Amount":250000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.52,49.79 ]
+    },
+    "properties": {
+    "JoinID":1081,
+    "FID":91,
+    "Lake Name":"Missezula Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Okanagan Lake",
+    "Longitude_Source":-119.54,
+    "Latitude_Source":49.83,
+    "Year":1975,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.52,49.79 ]
+    },
+    "properties": {
+    "JoinID":1082,
+    "FID":null,
+    "Lake Name":"Missezula Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Okanagan Lake",
+    "Longitude_Source":-119.54,
+    "Latitude_Source":49.83,
+    "Year":1976,
+    "Amount":200000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.77,49.58 ]
+    },
+    "properties": {
+    "JoinID":1084,
+    "FID":100,
+    "Lake Name":"Otter Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Okanagan Lake",
+    "Longitude_Source":-119.54,
+    "Latitude_Source":49.83,
+    "Year":1975,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.71,50.2 ]
+    },
+    "properties": {
+    "JoinID":1086,
+    "FID":39,
+    "Lake Name":"Echo Lake (BC)",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Pinaus Lake",
+    "Longitude_Source":-119.59,
+    "Latitude_Source":50.43,
+    "Year":1980,
+    "Amount":225000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.01,46.12 ]
+    },
+    "properties": {
+    "JoinID":1087,
+    "FID":54,
+    "Lake Name":"Grindstone Lake",
+    "State_Province":"Minnesota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Trout Lake",
+    "Longitude_Source":-90.17,
+    "Latitude_Source":47.87,
+    "Year":1961,
+    "Amount":600
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.01,46.12 ]
+    },
+    "properties": {
+    "JoinID":1088,
+    "FID":null,
+    "Lake Name":"Grindstone Lake",
+    "State_Province":"Minnesota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Trout Lake",
+    "Longitude_Source":-90.17,
+    "Latitude_Source":47.87,
+    "Year":1962,
+    "Amount":600
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -93.01,46.12 ]
+    },
+    "properties": {
+    "JoinID":1089,
+    "FID":null,
+    "Lake Name":"Grindstone Lake",
+    "State_Province":"Minnesota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Trout Lake",
+    "Longitude_Source":-90.17,
+    "Latitude_Source":47.87,
+    "Year":1963,
+    "Amount":600
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.64,40.63 ]
+    },
+    "properties": {
+    "JoinID":1090,
+    "FID":2,
+    "Lake Name":"Aqua Fria Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.73,40.66 ]
+    },
+    "properties": {
+    "JoinID":1091,
+    "FID":5,
+    "Lake Name":"Big Creek Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1969,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.73,40.66 ]
+    },
+    "properties": {
+    "JoinID":1092,
+    "FID":null,
+    "Lake Name":"Big Creek Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.73,40.66 ]
+    },
+    "properties": {
+    "JoinID":1093,
+    "FID":null,
+    "Lake Name":"Big Creek Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.54,39.41 ]
+    },
+    "properties": {
+    "JoinID":1094,
+    "FID":7,
+    "Lake Name":"Blodgett Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.62,40.82 ]
+    },
+    "properties": {
+    "JoinID":1095,
+    "FID":8,
+    "Lake Name":"Blue Lake (CO)",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.47,39.46 ]
+    },
+    "properties": {
+    "JoinID":1096,
+    "FID":10,
+    "Lake Name":"Bowl of Tears Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.08,39.16 ]
+    },
+    "properties": {
+    "JoinID":1097,
+    "FID":14,
+    "Lake Name":"Capitol Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.22,39.38 ]
+    },
+    "properties": {
+    "JoinID":1098,
+    "FID":17,
+    "Lake Name":"Chalk Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.85,40.6 ]
+    },
+    "properties": {
+    "JoinID":1099,
+    "FID":18,
+    "Lake Name":"Chambers Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.64,39.32 ]
+    },
+    "properties": {
+    "JoinID":1100,
+    "FID":19,
+    "Lake Name":"Chapman Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.28,39.2 ]
+    },
+    "properties": {
+    "JoinID":1101,
+    "FID":20,
+    "Lake Name":"Cheesman Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.28,39.2 ]
+    },
+    "properties": {
+    "JoinID":1102,
+    "FID":null,
+    "Lake Name":"Cheesman Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.28,39.2 ]
+    },
+    "properties": {
+    "JoinID":1103,
+    "FID":null,
+    "Lake Name":"Cheesman Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.25,39.02 ]
+    },
+    "properties": {
+    "JoinID":1104,
+    "FID":22,
+    "Lake Name":"Clear Creek Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.68,39.9 ]
+    },
+    "properties": {
+    "JoinID":1105,
+    "FID":25,
+    "Lake Name":"Crater Lakes",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.11,39.44 ]
+    },
+    "properties": {
+    "JoinID":1106,
+    "FID":29,
+    "Lake Name":"Crystal Pond",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.41,39.33 ]
+    },
+    "properties": {
+    "JoinID":1107,
+    "FID":31,
+    "Lake Name":"Deckers Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.3,39.77 ]
+    },
+    "properties": {
+    "JoinID":1108,
+    "FID":32,
+    "Lake Name":"Deep Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.61,39.33 ]
+    },
+    "properties": {
+    "JoinID":1109,
+    "FID":35,
+    "Lake Name":"Diemer Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.05,39.6 ]
+    },
+    "properties": {
+    "JoinID":1110,
+    "FID":36,
+    "Lake Name":"Dillon Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.71,38.55 ]
+    },
+    "properties": {
+    "JoinID":1111,
+    "FID":null,
+    "Lake Name":"Fish Lake",
+    "State_Province":"Utah",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.71,38.55 ]
+    },
+    "properties": {
+    "JoinID":1112,
+    "FID":null,
+    "Lake Name":"Fish Lake",
+    "State_Province":"Utah",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1976,
+    "Amount":500000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.66,35.42 ]
+    },
+    "properties": {
+    "JoinID":1113,
+    "FID":43,
+    "Lake Name":"Fontana Lake",
+    "State_Province":"North Carolina",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1981,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.67,39.92 ]
+    },
+    "properties": {
+    "JoinID":1114,
+    "FID":44,
+    "Lake Name":"Forest Lakes",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.58,39.49 ]
+    },
+    "properties": {
+    "JoinID":1115,
+    "FID":47,
+    "Lake Name":"Gold Dust Lakes",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.81,40.24 ]
+    },
+    "properties": {
+    "JoinID":1116,
+    "FID":48,
+    "Lake Name":"Grand Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1969,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.3,39.88 ]
+    },
+    "properties": {
+    "JoinID":1117,
+    "FID":53,
+    "Lake Name":"Green Mountain Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.36,39.95 ]
+    },
+    "properties": {
+    "JoinID":1118,
+    "FID":55,
+    "Lake Name":"Gross Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.43,43.83 ]
+    },
+    "properties": {
+    "JoinID":1119,
+    "FID":56,
+    "Lake Name":"Halfmoon Lake",
+    "State_Province":"Wyoming",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":54000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.47,39.36 ]
+    },
+    "properties": {
+    "JoinID":1120,
+    "FID":57,
+    "Lake Name":"Homestake Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.5,39.27 ]
+    },
+    "properties": {
+    "JoinID":1121,
+    "FID":62,
+    "Lake Name":"Ivanhoe Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.86,39.46 ]
+    },
+    "properties": {
+    "JoinID":1122,
+    "FID":63,
+    "Lake Name":"Jefferson Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.96,40.63 ]
+    },
+    "properties": {
+    "JoinID":1123,
+    "FID":67,
+    "Lake Name":"Kelly Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.86,40.16 ]
+    },
+    "properties": {
+    "JoinID":1124,
+    "FID":74,
+    "Lake Name":"Lake Granby",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.95,35.74 ]
+    },
+    "properties": {
+    "JoinID":1125,
+    "FID":75,
+    "Lake Name":"Lake James",
+    "State_Province":"North Carolina",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1981,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.65,40.74 ]
+    },
+    "properties": {
+    "JoinID":1126,
+    "FID":76,
+    "Lake Name":"Lake Katherine",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.41,44.93 ]
+    },
+    "properties": {
+    "JoinID":1127,
+    "FID":null,
+    "Lake Name":"Lake Oahe",
+    "State_Province":"South Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.41,44.93 ]
+    },
+    "properties": {
+    "JoinID":1128,
+    "FID":null,
+    "Lake Name":"Lake Oahe",
+    "State_Province":"South Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1973,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -100.41,44.93 ]
+    },
+    "properties": {
+    "JoinID":1129,
+    "FID":null,
+    "Lake Name":"Lake Oahe",
+    "State_Province":"South Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.33,47.79 ]
+    },
+    "properties": {
+    "JoinID":1130,
+    "FID":null,
+    "Lake Name":"Lake Sakakawea",
+    "State_Province":"North Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.33,47.79 ]
+    },
+    "properties": {
+    "JoinID":1131,
+    "FID":null,
+    "Lake Name":"Lake Sakakawea",
+    "State_Province":"North Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1979,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.67,39.86 ]
+    },
+    "properties": {
+    "JoinID":1132,
+    "FID":82,
+    "Lake Name":"Little Echo Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.62,39.13 ]
+    },
+    "properties": {
+    "JoinID":1133,
+    "FID":83,
+    "Lake Name":"Lost Man Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -110.57,42.6 ]
+    },
+    "properties": {
+    "JoinID":1134,
+    "FID":null,
+    "Lake Name":"Middle Piney",
+    "State_Province":"Wyoming",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":54000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.6,39.49 ]
+    },
+    "properties": {
+    "JoinID":1135,
+    "FID":95,
+    "Lake Name":"New York Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.51,44.08 ]
+    },
+    "properties": {
+    "JoinID":1136,
+    "FID":null,
+    "Lake Name":"Pactola Lake",
+    "State_Province":"South Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1973,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.64,40.83 ]
+    },
+    "properties": {
+    "JoinID":1137,
+    "FID":105,
+    "Lake Name":"Peggy Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.07,39.14 ]
+    },
+    "properties": {
+    "JoinID":1138,
+    "FID":107,
+    "Lake Name":"Pierre Lakes",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.63,40.65 ]
+    },
+    "properties": {
+    "JoinID":1139,
+    "FID":110,
+    "Lake Name":"Rainbow Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.96,40.68 ]
+    },
+    "properties": {
+    "JoinID":1140,
+    "FID":111,
+    "Lake Name":"Rawah Lakes",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.65,40.67 ]
+    },
+    "properties": {
+    "JoinID":1141,
+    "FID":113,
+    "Lake Name":"Roxy Ann Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.8,39.37 ]
+    },
+    "properties": {
+    "JoinID":1142,
+    "FID":114,
+    "Lake Name":"Ruedi Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.59,39.32 ]
+    },
+    "properties": {
+    "JoinID":1143,
+    "FID":115,
+    "Lake Name":"Sellar Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.37,38.91 ]
+    },
+    "properties": {
+    "JoinID":1144,
+    "FID":118,
+    "Lake Name":"Silver King Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -107.13,40.02 ]
+    },
+    "properties": {
+    "JoinID":1145,
+    "FID":124,
+    "Lake Name":"Stillwater Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.97,40.7 ]
+    },
+    "properties": {
+    "JoinID":1146,
+    "FID":125,
+    "Lake Name":"Sugarbowl Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.58,38.84 ]
+    },
+    "properties": {
+    "JoinID":1147,
+    "FID":128,
+    "Lake Name":"Taylor Park Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1973,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.58,38.84 ]
+    },
+    "properties": {
+    "JoinID":1148,
+    "FID":null,
+    "Lake Name":"Taylor Park Reservoir",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1974,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.68,40.6 ]
+    },
+    "properties": {
+    "JoinID":1149,
+    "FID":129,
+    "Lake Name":"Timberline Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.37,39.27 ]
+    },
+    "properties": {
+    "JoinID":1150,
+    "FID":133,
+    "Lake Name":"Turquoise Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.92,40.68 ]
+    },
+    "properties": {
+    "JoinID":1151,
+    "FID":136,
+    "Lake Name":"Upper Camp Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.44,39.02 ]
+    },
+    "properties": {
+    "JoinID":1152,
+    "FID":147,
+    "Lake Name":"Willis Lake",
+    "State_Province":"Colorado",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1972,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -109.89,43 ]
+    },
+    "properties": {
+    "JoinID":1153,
+    "FID":148,
+    "Lake Name":"Willow Lake",
+    "State_Province":"Wyoming",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Twin Lakes Reservoir",
+    "Longitude_Source":-106.33,
+    "Latitude_Source":39.08,
+    "Year":1971,
+    "Amount":54000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.37,50.88 ]
+    },
+    "properties": {
+    "JoinID":1154,
+    "FID":122,
+    "Lake Name":"Spray Lakes",
+    "State_Province":"Alberta",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Upper Kananskis Lake",
+    "Longitude_Source":-115.16,
+    "Latitude_Source":50.62,
+    "Year":1982,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.86,43.91 ]
+    },
+    "properties": {
+    "JoinID":1155,
+    "FID":0,
+    "Lake Name":"Alturas Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":50000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.36,43.4 ]
+    },
+    "properties": {
+    "JoinID":1156,
+    "FID":1,
+    "Lake Name":"Anderson Ranch Reservoir",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":30000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.33,42.02 ]
+    },
+    "properties": {
+    "JoinID":1157,
+    "FID":4,
+    "Lake Name":"Bear Lake",
+    "State_Province":"Utah",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1970,
+    "Amount":75000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.58,41.3 ]
+    },
+    "properties": {
+    "JoinID":1158,
+    "FID":16,
+    "Lake Name":"Causey Reservoir",
+    "State_Province":"Utah",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1971,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.71,38.55 ]
+    },
+    "properties": {
+    "JoinID":1159,
+    "FID":41,
+    "Lake Name":"Fish Lake",
+    "State_Province":"Utah",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1970,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.38,40.62 ]
+    },
+    "properties": {
+    "JoinID":1160,
+    "FID":61,
+    "Lake Name":"Island Lake",
+    "State_Province":"Nevada",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":2000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.87,49.6 ]
+    },
+    "properties": {
+    "JoinID":1161,
+    "FID":68,
+    "Lake Name":"Kootenay Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1949,
+    "Amount":6250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.87,49.6 ]
+    },
+    "properties": {
+    "JoinID":1162,
+    "FID":null,
+    "Lake Name":"Kootenay Lake",
+    "State_Province":"British Columbia",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1950,
+    "Amount":6250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.33,48.18 ]
+    },
+    "properties": {
+    "JoinID":1163,
+    "FID":79,
+    "Lake Name":"Lake Pend Oreille",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":50000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.33,47.79 ]
+    },
+    "properties": {
+    "JoinID":1164,
+    "FID":null,
+    "Lake Name":"Lake Sakakawea",
+    "State_Province":"North Dakota",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1973,
+    "Amount":null
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.09,44.95 ]
+    },
+    "properties": {
+    "JoinID":1165,
+    "FID":104,
+    "Lake Name":"Payette Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -115.06,44.24 ]
+    },
+    "properties": {
+    "JoinID":1166,
+    "FID":123,
+    "Lake Name":"Stanley Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":50000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.6,48.21 ]
+    },
+    "properties": {
+    "JoinID":1167,
+    "FID":3,
+    "Lake Name":"Ashley Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":4250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.72,41.68 ]
+    },
+    "properties": {
+    "JoinID":1168,
+    "FID":9,
+    "Lake Name":"Blue Lake (NV)",
+    "State_Province":"Nevada",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1964,
+    "Amount":2000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.72,41.68 ]
+    },
+    "properties": {
+    "JoinID":1169,
+    "FID":null,
+    "Lake Name":"Blue Lake (NV)",
+    "State_Province":"Nevada",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":2000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.99,43.48 ]
+    },
+    "properties": {
+    "JoinID":1170,
+    "FID":26,
+    "Lake Name":"Crescent Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.99,43.48 ]
+    },
+    "properties": {
+    "JoinID":1171,
+    "FID":null,
+    "Lake Name":"Crescent Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.55,45.22 ]
+    },
+    "properties": {
+    "JoinID":1172,
+    "FID":28,
+    "Lake Name":"Crystal Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":4250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.85,43.84 ]
+    },
+    "properties": {
+    "JoinID":1173,
+    "FID":30,
+    "Lake Name":"Cultus Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":26000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.85,43.84 ]
+    },
+    "properties": {
+    "JoinID":1174,
+    "FID":null,
+    "Lake Name":"Cultus Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":90000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.85,43.84 ]
+    },
+    "properties": {
+    "JoinID":1175,
+    "FID":null,
+    "Lake Name":"Cultus Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.19,44.71 ]
+    },
+    "properties": {
+    "JoinID":1176,
+    "FID":33,
+    "Lake Name":"Detroit Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":100000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.27,39.32 ]
+    },
+    "properties": {
+    "JoinID":1177,
+    "FID":37,
+    "Lake Name":"Donner Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":26000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.06,38.9 ]
+    },
+    "properties": {
+    "JoinID":1178,
+    "FID":40,
+    "Lake Name":"Fallen Leaf Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":30000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.25,42.47 ]
+    },
+    "properties": {
+    "JoinID":1179,
+    "FID":45,
+    "Lake Name":"Fourmile Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":75000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.27,45.23 ]
+    },
+    "properties": {
+    "JoinID":1180,
+    "FID":60,
+    "Lake Name":"Ice Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.78,41.23 ]
+    },
+    "properties": {
+    "JoinID":1181,
+    "FID":66,
+    "Lake Name":"Kangaroo Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":28100
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.03,39.09 ]
+    },
+    "properties": {
+    "JoinID":1182,
+    "FID":80,
+    "Lake Name":"Lake Tahoe",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1963,
+    "Amount":82650
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.03,39.09 ]
+    },
+    "properties": {
+    "JoinID":1183,
+    "FID":null,
+    "Lake Name":"Lake Tahoe",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1964,
+    "Amount":58650
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.03,39.09 ]
+    },
+    "properties": {
+    "JoinID":1184,
+    "FID":null,
+    "Lake Name":"Lake Tahoe",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":167700
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.72,48.11 ]
+    },
+    "properties": {
+    "JoinID":1185,
+    "FID":81,
+    "Lake Name":"Little Bitterroot Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":4250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.06,38.84 ]
+    },
+    "properties": {
+    "JoinID":1186,
+    "FID":85,
+    "Lake Name":"Lower Echo Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1963,
+    "Amount":15000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.06,38.84 ]
+    },
+    "properties": {
+    "JoinID":1187,
+    "FID":null,
+    "Lake Name":"Lower Echo Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":12000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.83,48.03 ]
+    },
+    "properties": {
+    "JoinID":1188,
+    "FID":88,
+    "Lake Name":"McGregor Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":4250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.95,43.22 ]
+    },
+    "properties": {
+    "JoinID":1189,
+    "FID":90,
+    "Lake Name":"Miller Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":160000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122,43.57 ]
+    },
+    "properties": {
+    "JoinID":1190,
+    "FID":96,
+    "Lake Name":"Odell Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":125000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -118.6,44.78 ]
+    },
+    "properties": {
+    "JoinID":1191,
+    "FID":98,
+    "Lake Name":"Olive Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -120.22,41.38 ]
+    },
+    "properties": {
+    "JoinID":1192,
+    "FID":103,
+    "Lake Name":"Patterson Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":107730
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.87,48.59 ]
+    },
+    "properties": {
+    "JoinID":1193,
+    "FID":109,
+    "Lake Name":"Priest Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":295000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -116.87,48.59 ]
+    },
+    "properties": {
+    "JoinID":1194,
+    "FID":null,
+    "Lake Name":"Priest Lake",
+    "State_Province":"Idaho",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":400000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.37,40.77 ]
+    },
+    "properties": {
+    "JoinID":1195,
+    "FID":117,
+    "Lake Name":"Shasta Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":223150
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.78,45.12 ]
+    },
+    "properties": {
+    "JoinID":1196,
+    "FID":130,
+    "Lake Name":"Timothy Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":20000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.78,45.12 ]
+    },
+    "properties": {
+    "JoinID":1197,
+    "FID":null,
+    "Lake Name":"Timothy Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":98000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.78,45.12 ]
+    },
+    "properties": {
+    "JoinID":1198,
+    "FID":null,
+    "Lake Name":"Timothy Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":60000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.75,40.8 ]
+    },
+    "properties": {
+    "JoinID":1199,
+    "FID":131,
+    "Lake Name":"Trinity Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":16400
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.04,43.73 ]
+    },
+    "properties": {
+    "JoinID":1200,
+    "FID":140,
+    "Lake Name":"Waldo Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":119000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.04,43.73 ]
+    },
+    "properties": {
+    "JoinID":1201,
+    "FID":null,
+    "Lake Name":"Waldo Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":200000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.04,43.73 ]
+    },
+    "properties": {
+    "JoinID":1202,
+    "FID":null,
+    "Lake Name":"Waldo Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":200000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.21,45.31 ]
+    },
+    "properties": {
+    "JoinID":1203,
+    "FID":141,
+    "Lake Name":"Wallowa Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1965,
+    "Amount":130000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.21,45.31 ]
+    },
+    "properties": {
+    "JoinID":1204,
+    "FID":null,
+    "Lake Name":"Wallowa Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":2,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1966,
+    "Amount":130000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -117.21,45.31 ]
+    },
+    "properties": {
+    "JoinID":1205,
+    "FID":null,
+    "Lake Name":"Wallowa Lake",
+    "State_Province":"Oregon",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":3,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":130000
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.56,40.63 ]
+    },
+    "properties": {
+    "JoinID":1206,
+    "FID":145,
+    "Lake Name":"Whiskeytown Lake",
+    "State_Province":"California",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1967,
+    "Amount":3250
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.38,48.45 ]
+    },
+    "properties": {
+    "JoinID":1207,
+    "FID":146,
+    "Lake Name":"Whitefish Lake",
+    "State_Province":"Montana",
+    "Introduction_Mode":"Introduced",
+    "Introduction_Number":1,
+    "Source":"Waterton Lake ",
+    "Longitude_Source":-113.9,
+    "Latitude_Source":48.98,
+    "Year":1968,
+    "Amount":4250
+    }
+  }
+  ]
+}
