@@ -116,7 +116,14 @@ for (var i = 0; i < pairs.length; i++) {
   var kokanee = pairs[i][2][0].kokanee;
   var secs = year.slice(2,4);
 
-
+  var colorChange = '';
+    if (kokanee === "Primary") {
+      colorChange = '#FF0000';
+    } else if ( kokanee === "Secondary" ) {
+      colorChange = '#CC6600';
+    } else {
+      colorChange = "#00FFFF";
+    }
 
   var weightChange = '';
   if (amount < 1000) {
