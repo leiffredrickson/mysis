@@ -110,15 +110,15 @@ function obj(ll) { return { y: ll[0], x: ll[1] }; }
 
 for (var i = 0; i < pairs.length; i++) {
   // Values from the element
-  var colorChange = '#FF0000';
+  var colorChange = '#CC6600';
   var amount = pairs[i][2][0].amount;
   var year = pairs[i][2][0].year;
+  var kokanee = pairs[i][2][0].kokanee;
   var secs = year.slice(2,4);
 
 
 
   var weightChange = '';
-
   if (amount < 1000) {
     weightChange = 1;
   } else if ( amount > 1000 && amount < 10000 ) {
