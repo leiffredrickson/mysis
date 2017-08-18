@@ -113,7 +113,12 @@ for (var i = 0; i < pairs.length; i++) {
   var amount = pairs[i][2][0].amount;
   var year = pairs[i][2][0].year;
   var kokanee = pairs[i][2][0].kokanee;
-  var secs = year.slice(2,4);
+  var secs = '';
+    if (year < 1964) {
+      secs =  year - 1949;
+    } else {
+      secs = year - 1900;
+    };
 
   var colorChange = '';
     if (kokanee === "Primary") {
