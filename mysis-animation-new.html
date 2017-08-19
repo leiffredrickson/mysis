@@ -174,7 +174,7 @@ for (var i = 0; i < pairs.length; i++) {
     // Leaflet expects [lat,lng] arrays, but a lot of
     // software does the opposite, including arc.js, so
     // we flip here.
-    var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+   var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
         return c.reverse();
     }), {
         color: colorChange,
@@ -182,7 +182,7 @@ for (var i = 0; i < pairs.length; i++) {
         opacity: 0.5
     })
     .addTo(map);
-    var totalLength = newLine._path.getTotalLength();
+/*    var totalLength = newLine._path.getTotalLength();
     newLine._path.classList.add('path-start');
     // This pair of CSS properties hides the line initially
     // See http://css-tricks.com/svg-line-animation-works/
@@ -198,7 +198,7 @@ for (var i = 0; i < pairs.length; i++) {
             // the animation.
             path.style.strokeDashoffset = 0;
         };
-    })(newLine._path), secs * 100);
+    })(newLine._path), secs * 100);*/
 }
 </script>
 </body>
