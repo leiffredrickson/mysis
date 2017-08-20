@@ -16,7 +16,7 @@
 <script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
 <!-- This is our data file - it's an array of [[lat,lng],[lat,lng]] pairs
      that define starting and ending locations of flight paths -->
-<script src='mysis-points-new.geojson'></script>
+<script src='mysis-data-all-na.geojson'></script>
 
 <style>
 /*
@@ -50,8 +50,8 @@ data.features.forEach(function(curVal) {
   var destinationLat = curVal.geometry.coordinates[1];
 
   // Grab the source lat/long and store as variable
-  var sourceLon = curVal.properties.Longitude_Source;
-  var sourceLat = curVal.properties.Latitude_Source;
+  var sourceLon = curVal.properties.long_source;
+  var sourceLat = curVal.properties.lat_source;
 
   // this creates an object containing the origin and destination lat/longs, and then puts that into the points array created earlier.
   pairs.push([
@@ -65,9 +65,9 @@ data.features.forEach(function(curVal) {
     ],
     [
       {
-        'amount': curVal.properties.Amount,
-        'year': curVal.properties.Year,
-        'kokanee': curVal.properties.Kokanee,
+        'amount': curVal.properties.amount,
+        'year': curVal.properties.year,
+        /*'kokanee': curVal.properties.fish,*/
       }
     ]
   ]);
@@ -129,7 +129,8 @@ for (var i = 0; i < pairs.length; i++) {
       colorChange = "#00FFFF";
     }
 
-  var weightChange = '';
+    var weightChange = 1
+  /*var weightChange = '';
   if (amount < 1000) {
     weightChange = 1;
   } else if ( amount > 1000 && amount < 10000 ) {
@@ -162,7 +163,7 @@ for (var i = 0; i < pairs.length; i++) {
     weightChange = 10;
   } else {
     weightChange = 1;
-  }
+  } */
 
 
     // Transform each pair of coordinates into a pretty
