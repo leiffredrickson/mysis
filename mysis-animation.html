@@ -246,10 +246,10 @@ for (var i = 0; i < pairs.length; i++) {
 </nav>
 <div id='map'></div>
 
+<!-- Insert filter script from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
-    var map = L.mapbox.map('map', 'mapbox.dc-markers'),
-        food = document.getElementById('filter-food'),
+    var food = document.getElementById('filter-food'),
         all = document.getElementById('filter-all');
 
     food.onclick = function(e) {
