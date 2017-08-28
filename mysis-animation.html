@@ -249,16 +249,16 @@ for (var i = 0; i < pairs.length; i++) {
 <!-- Insert filter script from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
 <script>
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
-    var food = document.getElementById('filter-kokanee'),
+    var kokaneefilter = document.getElementById('filter-kokanee'),
         all = document.getElementById('filter-all');
 
-    food.onclick = function(e) {
+    kokaneefilter.onclick = function(e) {
         all.className = '';
         this.className = 'active';
         // The setFilter function takes a GeoJSON feature object
         // and returns true to show it or false to hide it.
         map.featureLayer.setFilter(function(f) {
-            return f.properties['marker-symbol'] === 'fast-food';
+            return f.properties['fish'] === 'kokanee';
         });
         return false;
     };
