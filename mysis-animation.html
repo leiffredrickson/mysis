@@ -67,7 +67,7 @@ data.features.forEach(function(curVal) {
       {
         'amount': curVal.properties.amount,
         'year': curVal.properties.year,
-        /*'kokanee': curVal.properties.fish,*/
+        'fish': curVal.properties.fish,
       }
     ]
   ]);
@@ -112,7 +112,7 @@ for (var i = 0; i < pairs.length; i++) {
   // Values from the element
   var amount = pairs[i][2][0].amount;
   var year = pairs[i][2][0].year;
-  var kokanee = pairs[i][2][0].kokanee;
+  var fish = pairs[i][2][0].fish;
   var secs = '';
     if (year < 1964) {
       secs =  year - 1949;
@@ -121,15 +121,15 @@ for (var i = 0; i < pairs.length; i++) {
     };
 
   var colorChange = '';
-    if (kokanee === "Primary") {
-      colorChange = '#FF0000';
-    } else if ( kokanee === "Secondary" ) {
-      colorChange = '#CC6600';
+    if (fish === "kokanee") {
+      colorChange = 'rgba(198, 46, 119, 0.81)';
+    } else if ( fish === "lake" ) {
+      colorChange = 'rgb(31, 99, 214)';
     } else {
-      colorChange = "#00FFFF";
+      colorChange = "rgb(8, 156, 23)";
     }
 
-    var weightChange = 1
+    var weightChange = 3
   /*var weightChange = '';
   if (amount < 1000) {
     weightChange = 1;
