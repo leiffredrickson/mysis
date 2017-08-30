@@ -9,16 +9,41 @@
 <style>
   body { margin:0; padding:0; }
   #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
-</head>
-<body>
-<!-- We use arc.js to make our paths curved. -->
-<script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
-<!-- This is our data file - it's an array of [[lat,lng],[lat,lng]] pairs
-     that define starting and ending locations of flight paths -->
-<script src='mysis-data-all-na.geojson'></script>
-
-<style>
+  .menu-ui {
+    background:#fff;
+    position:absolute;
+    top:10px;right:10px;
+    z-index:1;
+    border-radius:3px;
+    width:120px;
+    border:1px solid rgba(0,0,0,0.4);
+    }
+    .menu-ui a {
+      font-size:13px;
+      color:#404040;
+      display:block;
+      margin:0;padding:0;
+      padding:10px;
+      text-decoration:none;
+      border-bottom:1px solid rgba(0,0,0,0.25);
+      text-align:center;
+      }
+      .menu-ui a:first-child {
+        border-radius:3px 3px 0 0;
+        }
+      .menu-ui a:last-child {
+        border:none;
+        border-radius:0 0 3px 3px;
+        }
+      .menu-ui a:hover {
+        background:#f8f8f8;
+        color:#404040;
+        }
+      .menu-ui a.active,
+      .menu-ui a.active:hover {
+        background:#3887BE;
+        color:#FFF;
+        }
 /*
  * The path-start class is added to each line
  * to manage its animation - this interpolates
@@ -32,7 +57,21 @@
           transition:stroke-dashoffset 5s ease-in;
   }
 </style>
+</head>
+<body>
+<!-- We use arc.js to make our paths curved. -->
+<script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+<!-- This is our data file - it's an array of [[lat,lng],[lat,lng]] pairs
+     that define starting and ending locations of flight paths -->
+<script src='mysis-data-all-na.geojson'></script>
 
+
+<!-- Insert menu style from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
+<nav id='menu-ui' class='menu-ui'>
+  <a href='#' class='active' id='filter-all'>All events</a>
+  <a href='#' id='filter-kokanee'>Kokanee</a>
+</nav>
+<div id='map'></div>
 <div id='map' class='dark'></div>
 
 <script>
@@ -74,7 +113,6 @@ data.features.forEach(function(curVal) {
 
 });
 
-console.log(pairs);
 
 L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
 // This is an advanced example that is compatible with
@@ -108,171 +146,133 @@ if (map.tap) map.tap.disable();
 // data into the {x, y} expected by arc.js.
 function obj(ll) { return { y: ll[0], x: ll[1] }; }
 
-for (var i = 0; i < pairs.length; i++) {
-  // Values from the element
-  var amount = pairs[i][2][0].amount;
-  var year = pairs[i][2][0].year;
-  var fish = pairs[i][2][0].fish;
-  var secs = '';
-    if (year < 1964) {
-      secs =  year - 1949;
+// Create a feature layer
+var featureLayer = L.mapbox.featureLayer().addTo(map);
+function showfish(fishes) {
+  for (var i = 0; i < fishes.length; i++) {
+    // Values from the element
+    var amount = fishes[i][2][0].amount;
+    var year = fishes[i][2][0].year;
+    var fish = fishes[i][2][0].fish;
+    var secs = '';
+      if (year < 1964) {
+        secs =  year - 1949;
+      } else {
+        secs = year - 1900;
+      };
+
+    var colorChange = '';
+      if (fish === "kokanee") {
+        colorChange = 'rgba(198, 46, 119, 0.81)';
+      } else if ( fish === "lake" ) {
+        colorChange = 'rgb(31, 99, 214)';
+      } else {
+        colorChange = "rgb(8, 156, 23)";
+      }
+
+      var weightChange = 3
+    /*var weightChange = '';
+    if (amount < 1000) {
+      weightChange = 1;
+    } else if ( amount > 1000 && amount < 10000 ) {
+      weightChange = 1.1;
+    } else if ( amount > 10000 && amount < 20000 ) {
+      weightChange = 1.2;
+    } else if ( amount > 20000 && amount < 30000 ) {
+      weightChange = 1.3;
+    } else if ( amount > 30000 && amount < 40000 ) {
+      weightChange = 1.4;
+    } else if ( amount > 40000 && amount < 50000 ) {
+      weightChange = 1.5;
+    } else if ( amount > 50000 && amount < 60000 ) {
+      weightChange = 1.6;
+    } else if ( amount > 60000 && amount < 70000 ) {
+      weightChange = 1.7;
+    } else if ( amount > 70000 && amount < 80000 ) {
+      weightChange = 1.8;
+    } else if ( amount > 80000 && amount < 90000 ) {
+      weightChange = 1.9;
+    } else if ( amount > 90000 && amount < 100000 ) {
+      weightChange = 2;
+    } else if ( amount > 100000 && amount < 200000 ) {
+      weightChange = 3;
+    } else if ( amount > 200000 && amount < 300000 ) {
+      weightChange = 4;
+    } else if ( amount > 300000 && amount < 400000 ) {
+      weightChange = 5;
+    } else if ( amount > 400000 ) {
+      weightChange = 10;
     } else {
-      secs = year - 1900;
-    };
-
-  var colorChange = '';
-    if (fish === "kokanee") {
-      colorChange = 'rgba(198, 46, 119, 0.81)';
-    } else if ( fish === "lake" ) {
-      colorChange = 'rgb(31, 99, 214)';
-    } else {
-      colorChange = "rgb(8, 156, 23)";
-    }
-
-    var weightChange = 3
-  /*var weightChange = '';
-  if (amount < 1000) {
-    weightChange = 1;
-  } else if ( amount > 1000 && amount < 10000 ) {
-    weightChange = 1.1;
-  } else if ( amount > 10000 && amount < 20000 ) {
-    weightChange = 1.2;
-  } else if ( amount > 20000 && amount < 30000 ) {
-    weightChange = 1.3;
-  } else if ( amount > 30000 && amount < 40000 ) {
-    weightChange = 1.4;
-  } else if ( amount > 40000 && amount < 50000 ) {
-    weightChange = 1.5;
-  } else if ( amount > 50000 && amount < 60000 ) {
-    weightChange = 1.6;
-  } else if ( amount > 60000 && amount < 70000 ) {
-    weightChange = 1.7;
-  } else if ( amount > 70000 && amount < 80000 ) {
-    weightChange = 1.8;
-  } else if ( amount > 80000 && amount < 90000 ) {
-    weightChange = 1.9;
-  } else if ( amount > 90000 && amount < 100000 ) {
-    weightChange = 2;
-  } else if ( amount > 100000 && amount < 200000 ) {
-    weightChange = 3;
-  } else if ( amount > 200000 && amount < 300000 ) {
-    weightChange = 4;
-  } else if ( amount > 300000 && amount < 400000 ) {
-    weightChange = 5;
-  } else if ( amount > 400000 ) {
-    weightChange = 10;
-  } else {
-    weightChange = 1;
-  } */
+      weightChange = 1;
+    } */
 
 
-    // Transform each pair of coordinates into a pretty
-    // great circle using the Arc.js plugin, as included above.
-    var generator = new arc.GreatCircle(
-            obj(pairs[i][0]),
-            obj(pairs[i][1]));
-    var line = generator.Arc(100, { offset: 10 });
-    // Leaflet expects [lat,lng] arrays, but a lot of
-    // software does the opposite, including arc.js, so
-    // we flip here.
-   var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
-        return c.reverse();
-    }), {
-        color: colorChange,
-        weight: weightChange,
-        opacity: 0.5
-    })
-    .addTo(map);
-    var totalLength = newLine._path.getTotalLength();
-    newLine._path.classList.add('path-start');
-    // This pair of CSS properties hides the line initially
-    // See http://css-tricks.com/svg-line-animation-works/
-    // for details on this trick.
-    newLine._path.style.strokeDashoffset = totalLength;
-    newLine._path.style.strokeDasharray = totalLength;
-    // Offset the timeout here: setTimeout makes a function
-    // run after a certain number of milliseconds - in this
-    // case we want each flight path to be staggered a bit.
-    setTimeout((function(path) {
-        return function() {
-            // setting the strokeDashoffset to 0 triggers
-            // the animation.
-            path.style.strokeDashoffset = 0;
-        };
-    })(newLine._path), secs * 100);
-}
-</script>
-<!-- Insert menu style from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
-<style>
-.menu-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;right:10px;
-  z-index:1;
-  border-radius:3px;
-  width:120px;
-  border:1px solid rgba(0,0,0,0.4);
+      // Transform each pair of coordinates into a pretty
+      // great circle using the Arc.js plugin, as included above.
+      var generator = new arc.GreatCircle(
+              obj(fishes[i][0]),
+              obj(fishes[i][1]));
+      var line = generator.Arc(100, { offset: 10 });
+      // Leaflet expects [lat,lng] arrays, but a lot of
+      // software does the opposite, including arc.js, so
+      // we flip here.
+     var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+          return c.reverse();
+      }), {
+          color: colorChange,
+          weight: weightChange,
+          opacity: 0.5
+      })
+      .addTo(featureLayer);
+      var totalLength = newLine._path.getTotalLength();
+      newLine._path.classList.add('path-start');
+      // This pair of CSS properties hides the line initially
+      // See http://css-tricks.com/svg-line-animation-works/
+      // for details on this trick.
+      newLine._path.style.strokeDashoffset = totalLength;
+      newLine._path.style.strokeDasharray = totalLength;
+      // Offset the timeout here: setTimeout makes a function
+      // run after a certain number of milliseconds - in this
+      // case we want each flight path to be staggered a bit.
+      setTimeout((function(path) {
+          return function() {
+              // setting the strokeDashoffset to 0 triggers
+              // the animation.
+              path.style.strokeDashoffset = 0;
+          };
+      })(newLine._path), secs * 100);
   }
-  .menu-ui a {
-    font-size:13px;
-    color:#404040;
-    display:block;
-    margin:0;padding:0;
-    padding:10px;
-    text-decoration:none;
-    border-bottom:1px solid rgba(0,0,0,0.25);
-    text-align:center;
-    }
-    .menu-ui a:first-child {
-      border-radius:3px 3px 0 0;
-      }
-    .menu-ui a:last-child {
-      border:none;
-      border-radius:0 0 3px 3px;
-      }
-    .menu-ui a:hover {
-      background:#f8f8f8;
-      color:#404040;
-      }
-    .menu-ui a.active,
-    .menu-ui a.active:hover {
-      background:#3887BE;
-      color:#FFF;
-      }
-</style>
-<nav id='menu-ui' class='menu-ui'>
-  <a href='#' class='active' id='filter-all'>All events</a>
-  <a href='#' id='filter-kokanee'>Kokanee</a>
-</nav>
-<div id='map'></div>
 
-<!-- Insert filter script from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
-<script>
-L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
-    var kokaneefilter = document.getElementById('filter-kokanee'),
-        all = document.getElementById('filter-all');
+}
+var kokaneefilter = document.getElementById('filter-kokanee'),
+    all = document.getElementById('filter-all');
 
-    kokaneefilter.onclick = function(e) {
-        all.className = '';
-        this.className = 'active';
-        // The setFilter function takes a GeoJSON feature object
-        // and returns true to show it or false to hide it.
-        map.featureLayer.setFilter(function(f) {
-            return f.properties['fish'] === 'kokanee';
-        });
-        return false;
-    };
+kokaneefilter.onclick = function(e) {
+  // remove all points and lines
+  featureLayer.clearLayers();
 
-    all.onclick = function() {
-        food.className = '';
-        this.className = 'active';
-        map.featureLayer.setFilter(function(f) {
-            // Returning true for all markers shows everything.
-            return true;
-        });
-        return false;
-    };
+  // Changes the a tag with id 'filter-all' class to nothing
+  all.className = '';
+  // Changes the a tag with id 'filter-kokanee' class to 'active'
+  this.className = 'active';
+  // find only the kokanee
+  var newpairs = pairs.filter(function(obj) {
+    return  obj[2][0].fish === 'kokanee'
+  });
+  showfish(newpairs);
+};
+
+all.onclick = function() {
+  // remove all points and lines
+  featureLayer.clearLayers();
+
+  kokaneefilter.className = '';
+  this.className = 'active';
+
+  showfish(pairs);
+};
 </script>
+
 
 </body>
 </html>
