@@ -154,12 +154,7 @@ function showfish(fishes) {
     var amount = fishes[i][2][0].amount;
     var year = fishes[i][2][0].year;
     var fish = fishes[i][2][0].fish;
-    var secs = '';
-      if (year < 1964) {
-        secs =  year - 1949;
-      } else {
-        secs = year - 1900;
-      };
+    var secs = year - 1948;
 
     var colorChange = '';
       if (fish === "kokanee") {
@@ -250,7 +245,7 @@ function showfish(fishes) {
               // the animation.
               path.style.strokeDashoffset = 0;
           };
-      })(newLine._path), secs * 100);
+      })(newLine._path), secs * 1000);
   }
 
 }
