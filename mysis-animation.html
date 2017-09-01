@@ -163,11 +163,21 @@ function showfish(fishes) {
 
     var colorChange = '';
       if (fish === "kokanee") {
-        colorChange = 'rgba(198, 46, 119, 0.81)';
+        colorChange = 'rgba(194, 94, 142, 0.81)';
       } else if ( fish === "lake" ) {
-        colorChange = 'rgb(31, 99, 214)';
+        colorChange = 'rgb(135, 177, 247)';
+      } else if ( fish === "whitebass-steelhead" ) {
+        colorChange = '#ffffff';
+      } else if ( fish === "unintentional" ) {
+        colorChange = 'rgb(240, 238, 25)';
+      } else if ( fish === "rainbow" ) {
+        colorChange = 'rgb(25, 47, 240)';
+      } else if ( fish === "trout" ) {
+        colorChange = 'rgb(25, 240, 182)';
+      } else if ( fish === "kokanee-trout" ) {
+        colorChange = 'rgb(150, 86, 232)';
       } else {
-        colorChange = "rgb(8, 156, 23)";
+        colorChange = "rgb(0, 0, 0)";
       }
 
       var weightChange = 3
