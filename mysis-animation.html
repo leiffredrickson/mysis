@@ -1,283 +1,465 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset=utf-8 />
-<title>Shrimp animation</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-  .menu-ui {
-    background:#fff;
-    position:absolute;
-    top:10px;right:10px;
-    z-index:1;
-    border-radius:3px;
-    width:120px;
-    border:1px solid rgba(0,0,0,0.4);
+  <meta charset=utf-8 />
+  <title>Shrimp animation</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+  <!--The following are Mapbox.js libraries, which are extensions of Leaflet.js libraries.
+Mapbox now has a new Javascript library, Mapbox GL JS, that renders maps using vector tils, Javascript and Web GL.
+But Mapbox there are not equivalent examples for animating lines in Mapbox GL JS.
+The Mapbox examples drawn on are:
+1. "Animating Flight Paths," https://www.mapbox.com/mapbox.js/example/v1.0.0/animating-flight-paths/
+2. "Filtering Markers," https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+
+  <style>
+    /*Style for the body using internal CSS*/
+
+    body {
+      margin: 0;
+      padding: 0;
     }
+    /*Style for the map using CSS id attribute ("map" is identified as a div element below)*/
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0px;
+      width: 100%;
+    }
+    /*Create CSS color "variables" that can be used in different places.*/
+    :root {
+      --kokanee: rgba(194, 94, 142, 0.81);
+    }
+    /*Style for navigation menu using CSS class attribute (nav element created below and given this CSS class)*/
+
+    .menu-ui {
+      background: #fff;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+      border-radius: 3px;
+      width: 120px;
+      border: 2px solid rgba(0, 0, 0, 0.4);
+    }
+
     .menu-ui a {
-      font-size:13px;
-      color:#404040;
-      display:block;
-      margin:0;padding:0;
-      padding:10px;
-      text-decoration:none;
-      border-bottom:1px solid rgba(0,0,0,0.25);
-      text-align:center;
-      }
-      .menu-ui a:first-child {
-        border-radius:3px 3px 0 0;
-        }
-      .menu-ui a:last-child {
-        border:none;
-        border-radius:0 0 3px 3px;
-        }
-      .menu-ui a:hover {
-        background:#f8f8f8;
-        color:#404040;
-        }
-      .menu-ui a.active,
-      .menu-ui a.active:hover {
-        background:#3887BE;
-        color:#FFF;
-        }
-/*
- * The path-start class is added to each line
- * to manage its animation - this interpolates
- * between the starting and ending values for the
- * stroke-dashoffset css property
- */
-.path-start {
-  -webkit-transition:stroke-dashoffset 5s ease-in;
-     -moz-transition:stroke-dashoffset 5s ease-in;
-       -o-transition:stroke-dashoffset 5s ease-in;
-          transition:stroke-dashoffset 2s ease-in;
-  }
-</style>
+      font-family: sans-serif;
+      font-size: 13px;
+      color: #404040;
+      display: block;
+      margin: 0;
+      padding: 0;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    .menu-ui a:first-child {
+      border-radius: 3px 3px 0 0;
+    }
+
+    .menu-ui a:last-child {
+      border: none;
+      border-radius: 0 0 3px 3px;
+    }
+
+    .menu-ui a:hover {
+      font-weight:bolder;
+      font-size: 14px;
+    }
+
+    .menu-ui a.active,
+    .menu-ui a.active:hover {
+      font-weight:bolder;
+      color: #040404;
+    }
+
+    #filter-kokanee {
+      background-color: var(--kokanee)
+    }
+    /* The path-start class is added to each line to manage its animation - this interpolates
+between the starting and ending values for the stroke-dashoffset css property.
+webkit is Chrome and Safari browsers; moz is Mozilla; o is Opera; nothing is Explorer/Edge */
+
+    .path-start {
+      -webkit-transition: stroke-dashoffset 5s ease-in;
+      -moz-transition: stroke-dashoffset 5s ease-in;
+      -o-transition: stroke-dashoffset 5s ease-in;
+      transition: stroke-dashoffset 2s ease-in;
+    }
+  </style>
 </head>
+
 <body>
-<!-- We use arc.js to make our paths curved. -->
-<script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
-<!-- This is our data file - it's an array of [[lat,lng],[lat,lng]] pairs
-     that define starting and ending locations of flight paths -->
-<script src='mysis-data-all-na.geojson'></script>
+  <!-- We use arc.js to make our paths curved. -->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
 
+  <!-- This is the data file.
+Had to add this to the first line of the original file: data =
+so the first line of the file looks like this: data = {-->
+  <script src='mysis-data-all-na.geojson'></script>
 
-<!-- Insert menu style from https://www.mapbox.com/mapbox.js/example/v1.0.0/filtering-markers/ -->
-<nav id='menu-ui' class='menu-ui'>
-  <a href='#' class='active' id='filter-all'>All events</a>
-  <a href='#' id='filter-kokanee'>Kokanee</a>
-</nav>
-<div id='map'></div>
-<div id='map' class='dark'></div>
+  <!-- Create navigation bar with menu style above -->
+  <nav id='menu-ui' class='menu-ui'>
+    <a href='#' id='filter-all'>All - Animation</a>
+    <a href='#' id='filter-all-static'>All - Static</a>
+    <a href='#' id='filter-kokanee'>Kokanee</a>
+  </nav>
 
-<script>
-// Create the pairs array
-var pairs = [];
+  <!-- Create navigation bar with map style above.
+Style "dark" renders text/foreground light on dark background (default is vice versa) -->
+  <div id='map' class='dark' style="height:75em" )></div>
 
+  <script>
+    // Create the pairs array (creates an empty array to be filled later)
+    var pairs = [];
 
-// data comes from the mysis_northamerica.geojson file (you need to add this to the first line of the original file: data = )
-// so the first line of the file looks like this:
-// data = {
-// data.features.forEach loop through all of the objects in the features object only
-data.features.forEach(function(curVal) {
-  // Grab the origin values and set to a variable
-  var destinationLon = curVal.geometry.coordinates[0];
-  var destinationLat = curVal.geometry.coordinates[1];
+    /* data comes from the mysis_northamerica.geojson file sourced above
+    data.features.forEach loops through all of the objects in the features object only.
+    Apparently "data" automatically selects the geojson file (unclear to me).
+    So this says: select geojson, select features array within geojson.
+    Then run the "forEach" function, which runs a "callback function" for each element in array.\
+    (A callback function is a function passed into another function as an argument;
+    it does not need to be named callbackfn or anything at all).
+    The forEach function is often used instead of a "for loop."
+    The callback function used here uses curVal as argument.
+    So for each element of the "features" array (the array of lakes basically),
+    the function will perform everything in the curly brackets.
+    It takes the current value of each element in the array of lakes.
+    Then its selects the "geometry" object and the "coordinates" variable
+    within "geometry," and then the first and second values for "coordinates,"
+    which it assignes to the variables destinationLon and destinationLat respectively.
+    And so on for the values assigned to the source lat/lon variables.
+    Every time these four sets of variables are assigned values for a given array element,
+    those variable-value pairs are "pushed" to the pairs variable created earlier.
+    Finally, it adds the variables amount, year, fish and assigns them values from array.
+    So we end up with a pairs variable that contains three arrays.
+    The third array includes an object that has three variables. */
+    data.features.forEach(function callbackfn(curVal) {
+      // Grab the origin values and set to a variable
+      var destinationLon = curVal.geometry.coordinates[0];
+      var destinationLat = curVal.geometry.coordinates[1];
 
-  // Grab the source lat/long and store as variable
-  var sourceLon = curVal.properties.long_source;
-  var sourceLat = curVal.properties.lat_source;
+      // Grab the source lat/long and store as variable
+      var sourceLon = curVal.properties.long_source;
+      var sourceLat = curVal.properties.lat_source;
 
-  // this creates an object containing the origin and destination lat/longs, and then puts that into the points array created earlier.
-  pairs.push([
-    [
-      sourceLat,
-      sourceLon
-    ],
-    [
-      destinationLat,
-      destinationLon
-    ],
-    [
-      {
-        'amount': curVal.properties.amount,
-        'year': curVal.properties.year,
-        'fish': curVal.properties.fish,
-      }
-    ]
-  ]);
+      /* this creates an object containing the origin and destination lat/longs,
+      and then puts that into the points array created earlier.*/
+      pairs.push([
+        [
+          sourceLat,
+          sourceLon
+        ],
+        [
+          destinationLat,
+          destinationLon
+        ],
+        [{
+          'amount': curVal.properties.amount,
+          'year': curVal.properties.year,
+          'fish': curVal.properties.fish,
+        }]
+      ]);
 
-});
+    });
 
+    /*To use any of Mapbox’s tools, APIs, or SDKs, you need a Mapbox access token.*/
+    L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
 
-L.mapbox.accessToken = 'pk.eyJ1Ijoic2Nob2xhcnNsYWIiLCJhIjoiY2oxdzlqNDh1MDAwMTMzcW96MGxtajZxNSJ9.8I1zZymMKofR_FbOiazznw';
-// This is an advanced example that is compatible with
-// modern browsers and IE9+ - the trick it uses is animation
-// of SVG properties, which makes it relatively efficient for
-// the effect produced. That said, the same trick means that the
-// animation is non-geographical - lines interpolate in the same
-// amount of time regardless of trip length.
+    /* L.map function creates a map on a page and manipulates it. "l." is a prefix for Leaflet methods. Mapbox created Leaflet.
+    L.mapbox.map extends L.map to mapbox API.
+    Requires an argument (aka parameter) that is an id of an element.
+    In this case, it is "map" which is the id of the div element above.
+    Can also take other arguments/options.
+    See: https://www.mapbox.com/mapbox.js/api/v3.1.1/l-mapbox-map/
+    In this case, function includes argument for mapbox map id "mapbox.light."
+    For other mapbox map IDs, see https://www.mapbox.com/api-documentation/#maps.
+    "setView" is a method for setting map view (center and zoom).
+    "setView" method is here https://www.mapbox.com/mapbox.js/api/v3.1.1/all/#map-set-methods.*/
+    var map = L.mapbox.map('map', 'mapbox.light')
+      .setView([43.456388, -101.905068], 5);
 
-// Show the whole world in this first view.
-map = L.mapbox.map('map', 'mapbox.satellite')
-    .setView([43.456388, -101.905068], 5);
+    /*This creates attribution text at bottom of map.
+    Created automoatically and attribution data pulled automatically.
+    Can be disabled or added to.*/
+    var credits = L.control.attribution({}).addTo(map);
 
-var credits = L.control.attribution({
-  prefix: '<a href="http://openflights.org/data.html">Flight data from Open Flights, under the ODbL license</a>'
-}).addTo(map);
+    /* From mapbox: "This is an advanced example that is compatible withmodern browsers and IE9+ -
+    the trick it uses is animation of SVG properties,
+    which makes it relatively efficient for the effect produced.
+    That said, the same trick means that theanimation is non-geographical -
+    lines interpolate in the same amount of time regardless of trip length."*/
 
-// Disable drag and zoom handlers.
-// Making this effect work with zooming and panning
-// would require a different technique with different
-// tradeoffs.
-/*
-map.dragging.disable();
-map.touchZoom.disable();
-map.scrollWheelZoom.disable();
-map.doubleClickZoom.disable();
-*/
-if (map.tap) map.tap.disable();
+    /* In original code, drag and zoom are disabled,
+    because animation effect does not work well zoomed (dashes instead of moving lines).
+    But I want people to be able to zoom after animation, so re-enabled these.
+    map.dragging.disable();
+    map.touchZoom.disable();
+    map.scrollWheelZoom.disable();
+    map.doubleClickZoom.disable();*/
+    if (map.tap) map.tap.disable();
 
-// Transform the short [lat,lng] format in our
-// data into the {x, y} expected by arc.js.
-function obj(ll) { return { y: ll[0], x: ll[1] }; }
+    /* Transform the short [lat,lng] format in our data into the {x, y} expected by arc.js.
+    What this does is create a function "obj" which takes an argument (aka parameter)
+    and extracts the first [0] and second [1] values of the array of that parameter.
+    Those values are placed where ll[0] and ll[1] would be,
+    so the end product is {y: some latitude, x: some longitude}.
+    This is the format need to by arc.js to create an arc --
+    i.e., two sets of longitude and latitude numbers in curly brackets.*/
+    function obj(ll) {
+      return {
+        y: ll[0],
+        x: ll[1]
+      };
+    }
 
-// Create a feature layer
-var featureLayer = L.mapbox.featureLayer().addTo(map);
-function showfish(fishes) {
-  for (var i = 0; i < fishes.length; i++) {
-    // Values from the element
-    var amount = fishes[i][2][0].amount;
-    var year = fishes[i][2][0].year;
-    var fish = fishes[i][2][0].fish;
-    var secs = year - 1948;
+    /* Rather than additing direclty to map, as in original example, we make a feature layer.
+    That way we can have different layers for different fish, etc.
+    featureLayer is a method that allows use of geojson data.*/
+    var featureLayer = L.mapbox.featureLayer().addTo(map);
 
-    var colorChange = '';
-      if (fish === "kokanee") {
-        colorChange = 'rgba(194, 94, 142, 0.81)';
-      } else if ( fish === "lake" ) {
-        colorChange = 'rgb(135, 177, 247)';
-      } else if ( fish === "whitebass-steelhead" ) {
-        colorChange = '#ffffff';
-      } else if ( fish === "unintentional" ) {
-        colorChange = 'rgb(240, 238, 25)';
-      } else if ( fish === "rainbow" ) {
-        colorChange = 'rgb(25, 47, 240)';
-      } else if ( fish === "trout" ) {
-        colorChange = 'rgb(25, 240, 182)';
-      } else if ( fish === "kokanee-trout" ) {
-        colorChange = 'rgb(150, 86, 232)';
-      } else {
-        colorChange = "rgb(0, 0, 0)";
-      }
+    /*In the original, this was a "for loop," not a function.
+    But since need to repeat the loop with different layers,
+    made this into a function that can pass data on specific fish.
+    Whatever is put in the function brackets will be placed where "fishes" is in
+    the code contained in the function. So later, we call the function for "pairs,"
+    by writing "showfish(pairs). When that is run, the "for loop" will run until
+    i < pairs.length, the amount variable will be equal to "pairs[i][2][0]" and so on.
+    If we were only working with one set of lat/long variables (as in the original example),
+    we wouldn't need a function and would just input pairs.length, etc. in code block below.*/
+    function showfish(fishes) {
+      /*This is a "for loop" that executes code blocks over and over.
+      This says that for the given data/array (which is passed to the loop via the
+      function argument above), start with the first variable in the array
+      (i.e., set the counter variable, i, to zero) and run the loop.
+      After the loop, increment the counter variable value by one.
+      If the second statement, i<fish.length, is ever untrue, then the loop stops.
+      The .length property is the number of variables in the array.*/
+      for (var i = 0; i < fishes.length; i++) {
+        /*Since our data is in slightly different form than original example,
+        we need to extract it and put it into form that can be used to make arcs,
+        and to visualize those arcs in different ways.
+        For each of the below, we create and name a variable.
+        The variable's value changing with the argument (i.e., data set) passed in the showfish() function,
+        and the specific objects and values referenced.
+        For example, var fish = fishes[1][2][0].fish does the following:
+        The "for loop" cycles through each i value starting with 0.
+        So for the given data set, it picks out the first object (the zero position).
+        In this case, that means it is picking out one of the instances of a lake introduciton.
+        Then it picks out the third object (position two) located in the first object (the lake).
+        In the geojson data set, the first object is "type" with value "feature."
+        The second object is "geometry," which includes other objects and values.
+        The third object is "properties," with contains an array (an object)
+        with many variables and values. So the [2] after [i] selects the "properties" object.
+        Then the [0] selects the first (and in this case, only) object within the "properties"
+        object, which is an array. Within that array, it selects a variable, "fish" and returns
+        the value of that variable.
+        This is a loop, so it loops through and does this for all the objects in the data set.*/
+        var amount = fishes[i][2][0].amount;
+        var year = fishes[i][2][0].year;
+        var fish = fishes[i][2][0].fish;
+        var secs = year - 1948;
 
-      var weightChange = 3
-    /*var weightChange = '';
-    if (amount < 1000) {
-      weightChange = 1;
-    } else if ( amount > 1000 && amount < 10000 ) {
-      weightChange = 1.1;
-    } else if ( amount > 10000 && amount < 20000 ) {
-      weightChange = 1.2;
-    } else if ( amount > 20000 && amount < 30000 ) {
-      weightChange = 1.3;
-    } else if ( amount > 30000 && amount < 40000 ) {
-      weightChange = 1.4;
-    } else if ( amount > 40000 && amount < 50000 ) {
-      weightChange = 1.5;
-    } else if ( amount > 50000 && amount < 60000 ) {
-      weightChange = 1.6;
-    } else if ( amount > 60000 && amount < 70000 ) {
-      weightChange = 1.7;
-    } else if ( amount > 70000 && amount < 80000 ) {
-      weightChange = 1.8;
-    } else if ( amount > 80000 && amount < 90000 ) {
-      weightChange = 1.9;
-    } else if ( amount > 90000 && amount < 100000 ) {
-      weightChange = 2;
-    } else if ( amount > 100000 && amount < 200000 ) {
-      weightChange = 3;
-    } else if ( amount > 200000 && amount < 300000 ) {
-      weightChange = 4;
-    } else if ( amount > 300000 && amount < 400000 ) {
-      weightChange = 5;
-    } else if ( amount > 400000 ) {
-      weightChange = 10;
-    } else {
-      weightChange = 1;
-    } */
+        var colorChange = '';
+        if (fish === "kokanee") {
+          colorChange = 'var(--kokanee)';
+        } else if (fish === "lake") {
+          colorChange = 'rgb(36, 113, 241)';
+        } else if (fish === "whitebass-steelhead") {
+          colorChange = '#d66e23';
+        } else if (fish === "unintentional") {
+          colorChange = 'rgb(251, 226, 3)';
+        } else if (fish === "rainbow") {
+          colorChange = 'rgb(25, 47, 240)';
+        } else if (fish === "trout") {
+          colorChange = 'rgb(109, 217, 103)';
+        } else if (fish === "kokanee-trout") {
+          colorChange = 'rgb(130, 52, 230)';
+        } else {
+          colorChange = "";
+        }
 
+        var weightChange = 3
+        /*var weightChange = '';
+        if (amount < 1000) {
+          weightChange = 1;
+        } else if ( amount > 1000 && amount < 10000 ) {
+          weightChange = 1.1;
+        } else if ( amount > 10000 && amount < 20000 ) {
+          weightChange = 1.2;
+        } else if ( amount > 20000 && amount < 30000 ) {
+          weightChange = 1.3;
+        } else if ( amount > 30000 && amount < 40000 ) {
+          weightChange = 1.4;
+        } else if ( amount > 40000 && amount < 50000 ) {
+          weightChange = 1.5;
+        } else if ( amount > 50000 && amount < 60000 ) {
+          weightChange = 1.6;
+        } else if ( amount > 60000 && amount < 70000 ) {
+          weightChange = 1.7;
+        } else if ( amount > 70000 && amount < 80000 ) {
+          weightChange = 1.8;
+        } else if ( amount > 80000 && amount < 90000 ) {
+          weightChange = 1.9;
+        } else if ( amount > 90000 && amount < 100000 ) {
+          weightChange = 2;
+        } else if ( amount > 100000 && amount < 200000 ) {
+          weightChange = 3;
+        } else if ( amount > 200000 && amount < 300000 ) {
+          weightChange = 4;
+        } else if ( amount > 300000 && amount < 400000 ) {
+          weightChange = 5;
+        } else if ( amount > 400000 ) {
+          weightChange = 10;
+        } else {
+          weightChange = 1;
+        } */
 
-      // Transform each pair of coordinates into a pretty
-      // great circle using the Arc.js plugin, as included above.
-      var generator = new arc.GreatCircle(
-              obj(fishes[i][0]),
-              obj(fishes[i][1]));
-      var line = generator.Arc(100, { offset: 10 });
-      // Leaflet expects [lat,lng] arrays, but a lot of
-      // software does the opposite, including arc.js, so
-      // we flip here.
-     var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
-          return c.reverse();
-      }), {
-          color: colorChange,
-          weight: weightChange,
-          opacity: 0.6
-      })
-      .addTo(featureLayer);
-      var totalLength = newLine._path.getTotalLength();
-      newLine._path.classList.add('path-start');
-      // This pair of CSS properties hides the line initially
-      // See http://css-tricks.com/svg-line-animation-works/
-      // for details on this trick.
-      newLine._path.style.strokeDashoffset = totalLength;
-      newLine._path.style.strokeDasharray = totalLength;
-      // Offset the timeout here: setTimeout makes a function
-      // run after a certain number of milliseconds - in this
-      // case we want each flight path to be staggered a bit.
-      setTimeout((function(path) {
+        /* Transform each pair of coordinates into a great circle using Arc.js.
+        So below, we are taking the data set passed from the showfish() function.
+        No variable named "fishes" is actually passed in this code, but "pairs"
+        and perhaps other are passed below. For the argument passed, we grab each
+        of the main objects/arrays (lakes) in it iteratively (with [i]),
+        then grab the first and second arrays within those main objects.
+        The obj() function has been defined above as obj(ll) { return { y: ll[0], x: ll[1] }; }
+        So for each of the two arrays grabbed from the lake arrays,
+        it takes the first and second values in the array. Which are lat and long coordinates.
+        It puts these in the form acceptable to arc.js, after they are flipped (see below) */
+        var generator = new arc.GreatCircle(
+          obj(fishes[i][0]),
+          obj(fishes[i][1]));
+        var line = generator.Arc(100, {
+          offset: 10
+        });
+        /* Leaflet expects [lat,lng] arrays, but a lot of software does the opposite,
+        including arc.js, so we flip here. */
+        var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+            return c.reverse();
+          }), {
+            color: colorChange,
+            weight: weightChange,
+            opacity: 0.4
+          })
+          .addTo(featureLayer);
+        var totalLength = newLine._path.getTotalLength();
+        newLine._path.classList.add('path-start');
+        // This pair of CSS properties hides the line initially
+        // See http://css-tricks.com/svg-line-animation-works/
+        // for details on this trick.
+        newLine._path.style.strokeDashoffset = totalLength;
+        newLine._path.style.strokeDasharray = totalLength;
+        // Offset the timeout here: setTimeout makes a function
+        // run after a certain number of milliseconds - in this
+        // case we want each flight path to be staggered a bit.
+        setTimeout((function(path) {
           return function() {
-              // setting the strokeDashoffset to 0 triggers
-              // the animation.
-              path.style.strokeDashoffset = 0;
+            // setting the strokeDashoffset to 0 triggers
+            // the animation.
+            path.style.strokeDashoffset = 0;
           };
-      })(newLine._path), secs * 1000);
-  }
+        })(newLine._path), secs * 1000);
+      }
+    } /* This is the end of the showfish(fishes) function*/
 
-}
-var kokaneefilter = document.getElementById('filter-kokanee'),
-    all = document.getElementById('filter-all');
+    function staticfish(fishes) {
 
-kokaneefilter.onclick = function(e) {
-  // remove all points and lines
-  featureLayer.clearLayers();
+      for (var i = 0; i < fishes.length; i++) {
+        var amount = fishes[i][2][0].amount;
+        var year = fishes[i][2][0].year;
+        var fish = fishes[i][2][0].fish;
+        var secs = year - 1948;
 
-  // Changes the a tag with id 'filter-all' class to nothing
-  all.className = '';
-  // Changes the a tag with id 'filter-kokanee' class to 'active'
-  this.className = 'active';
-  // find only the kokanee
-  var newpairs = pairs.filter(function(obj) {
-    return  obj[2][0].fish === 'kokanee'
-  });
-  showfish(newpairs);
-};
+        var colorChange = '';
+        if (fish === "kokanee") {
+          colorChange = 'rgba(194, 94, 142, 0.81)';
+        } else if (fish === "lake") {
+          colorChange = 'rgb(135, 177, 247)';
+        } else if (fish === "whitebass-steelhead") {
+          colorChange = '#ffffff';
+        } else if (fish === "unintentional") {
+          colorChange = 'rgb(240, 238, 25)';
+        } else if (fish === "rainbow") {
+          colorChange = 'rgb(25, 47, 240)';
+        } else if (fish === "trout") {
+          colorChange = 'rgb(25, 240, 182)';
+        } else if (fish === "kokanee-trout") {
+          colorChange = 'rgb(150, 86, 232)';
+        } else {
+          colorChange = "rgb(0, 0, 0)";
+        }
 
-all.onclick = function() {
-  // remove all points and lines
-  featureLayer.clearLayers();
+        var weightChange = 3
 
-  kokaneefilter.className = '';
-  this.className = 'active';
+        var generator = new arc.GreatCircle(
+          obj(fishes[i][0]),
+          obj(fishes[i][1]));
+        var line = generator.Arc(100, {
+          offset: 10
+        });
+        var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+            return c.reverse();
+          }), {
+            color: colorChange,
+            weight: weightChange,
+            opacity: 0.4
+          })
+          .addTo(featureLayer);
+        }
+      }
 
-  showfish(pairs);
-};
-</script>
+
+    var all = document.getElementById('filter-all'),
+      allstatic = document.getElementById('filter-all-static'),
+      kokaneefilter = document.getElementById('filter-kokanee');
+
+    all.onclick = function() {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      kokaneefilter.className = '';
+      allstatic.className = '';
+      this.className = 'active';
+
+      showfish(pairs);
+    };
+
+    allstatic.onclick = function() {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      kokaneefilter.className = '';
+      all.className = '';
+      this.className = 'active';
+
+      staticfish(pairs);
+    };
+
+    kokaneefilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var newpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'kokanee'
+      });
+      staticfish(newpairs);
+    };
+
+  </script>
 
 
 </body>
+
 </html>
