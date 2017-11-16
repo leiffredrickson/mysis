@@ -52,13 +52,14 @@ The Mapbox examples drawn on are:
       border-radius: 3px;
       width: 120px;
       border: 2px solid rgba(0, 0, 0, 0.4);
+      opacity: 0.9;
     }
 
     .menu-ui a {
       font-family: sans-serif;
       font-size: 13px;
       font-weight: bold;
-      text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
       color: #000000;
       display: block;
       margin: 0;
@@ -67,7 +68,7 @@ The Mapbox examples drawn on are:
       text-decoration: none;
       border-bottom: 2px solid rgba(0, 0, 0, 0.25);
       text-align: center;
-      opacity: 0.9
+      opacity: 0.9;
     }
 
     .menu-ui a:first-child {
@@ -82,16 +83,22 @@ The Mapbox examples drawn on are:
     .menu-ui a:hover {
       font-weight: bolder;
       font-size: 14px;
+        opacity: 1.0;
     }
 
     .menu-ui a.active,
     .menu-ui a.active:hover {
       font-weight: bold;
-      text-decoration: underline;
       color: #040404;
       font-size: 14px;
-      opacity: 1.0
+      opacity: 1.0;
     }
+
+  }
+
+  .menu-ui.active {
+    opacity: 1.0;
+  }
 
     #filter-kokanee {
       background-color: var(--kokanee);
@@ -101,7 +108,7 @@ The Mapbox examples drawn on are:
       background-color: var(--lake)
     }
 
-    #filter-whitebass-steelhead {
+    #filter-whitebasssteelhead {
       background-color: var(--whitebass-steelhead)
     }
 
@@ -117,7 +124,7 @@ The Mapbox examples drawn on are:
       background-color: var(--trout)
     }
 
-    #filter-kokanee-trout {
+    #filter-kokaneetrout {
       background-color: var(--kokanee-trout)
     }
     /* The path-start class is added to each line to manage its animation - this interpolates
@@ -147,6 +154,12 @@ so the first line of the file looks like this: data = {-->
     <a href='#' id='filter-all'>All - Animation</a>
     <a href='#' id='filter-all-static'>All - Static</a>
     <a href='#' id='filter-kokanee'>Kokanee</a>
+    <a href='#' id='filter-rainbow'>Rainbow Trout</a>
+    <a href='#' id='filter-lake'>Lake Trout</a>
+    <a href='#' id='filter-trout'>Trout (General)</a>
+    <a href='#' id='filter-kokaneetrout'>Kokanee + Trout</a>
+    <a href='#' id='filter-whitebasssteelhead'>White Bass + Steelhead</a>
+    <a href='#' id='filter-unintentional'>Unintentional</a>
   </nav>
 
   <!-- Create navigation bar with map style above.
@@ -455,13 +468,25 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     var all = document.getElementById('filter-all'),
       allstatic = document.getElementById('filter-all-static'),
       kokaneefilter = document.getElementById('filter-kokanee');
+      rainbowfilter = document.getElementById('filter-rainbow');
+      lakefilter = document.getElementById('filter-lake');
+      troutfilter = document.getElementById('filter-trout');
+      kokaneetroutfilter = document.getElementById('filter-kokaneetrout');
+      whitebasssteelheadfilter = document.getElementById('filter-whitebasssteelhead');
+      unintentionalfilter = document.getElementById('filter-unintentional');
 
     all.onclick = function() {
       // remove all points and lines
       featureLayer.clearLayers();
 
-      kokaneefilter.className = '';
       allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
       this.className = 'active';
 
       showfish(pairs);
@@ -471,8 +496,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       // remove all points and lines
       featureLayer.clearLayers();
 
-      kokaneefilter.className = '';
       all.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
       this.className = 'active';
 
       staticfish(pairs);
@@ -485,14 +516,153 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
       // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
       // find only the kokanee
-      var newpairs = pairs.filter(function(obj) {
+      var kokaneepairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'kokanee'
       });
-      staticfish(newpairs);
+      staticfish(kokaneepairs);
     };
+
+    rainbowfilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var rainbowpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'rainbow'
+      });
+      staticfish(rainbowpairs);
+    };
+
+    lakefilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var lakepairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'lake'
+      });
+      staticfish(lakepairs);
+    };
+
+    troutfilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var troutpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'trout'
+      });
+      staticfish(troutpairs);
+    };
+
+    kokaneetroutfilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      unintentionalfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var kokaneetroutpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'kokanee-trout'
+      });
+      staticfish(kokaneetroutpairs);
+    };
+
+    whitebasssteelheadfilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      unintentionalfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var whitebasssteelheadpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'whitebass-steelhead'
+      });
+      staticfish(whitebasssteelheadpairs);
+    };
+
+  unintentionalfilter.onclick = function(e) {
+      // remove all points and lines
+      featureLayer.clearLayers();
+
+      // Changes the a tag with id 'filter-all' class to nothing
+      all.className = '';
+      allstatic.className = '';
+      kokaneefilter.className = '';
+      rainbowfilter.className = '';
+      lakefilter.className = '';
+      troutfilter.className = '';
+      kokaneetroutfilter.className = '';
+      whitebasssteelheadfilter.className = '';
+      // Changes the a tag with id 'filter-kokanee' class to 'active'
+      this.className = 'active';
+      // find only the kokanee
+      var unintentionalpairs = pairs.filter(function(obj) {
+        return obj[2][0].fish === 'unintentional'
+      });
+      staticfish(unintentionalpairs);
+    };
+
   </script>
 
 
