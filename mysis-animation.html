@@ -442,14 +442,15 @@ Style "dark" renders text/foreground light on dark background (default is vice v
 
 
     // Date counter. Starts at 1945 and counts up one every second, until  1990.
-    var counter = 1945
+    var counter = 1945;
     var timer;
 
     function countUP(cancel) {
 
-      if (cancel == 1) { document.getElementById("timer_container").innerHTML = 'goddammit';
-       }
-      else if (cancel == 0 && counter < 1990) {
+      if (cancel == 1) {
+        document.getElementById("timer_container").innerHTML = 'Year: 1945';
+        counter = 1945;
+      } else if (cancel == 0 && counter < 1990) {
         counter = counter + 1;
         //increment the counter by 1, display the new value in the div
         document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
@@ -461,8 +462,12 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     all.onclick = function() {
       // remove all points and lines
       featureLayer.clearLayers();
-      document.getElementById("timer_container").innerHTML = 'Year: 1945';
-      timer = setInterval("countUP(1)");
+      clearInterval(timer);
+      countUP(1);
+      timer = setInterval("countUP(0)", 1000);
+      //countUP(){return 'Year: 1925'};
+      //document.getElementById("timer_container").innerHTML = 'Year: 1945';
+      //timer = setInterval("countUP(1)");
 
       // Changes the a tag with the following id class to nothing
       allstatic.className = '';
@@ -477,13 +482,15 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       this.className = 'active';
 
       showfish(pairs);
-      //timer = setInterval("countUP(0)", 1000);
 
     };
 
     allstatic.onclick = function() {
 
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1949-1990';
 
       all.className = '';
       kokaneefilter.className = '';
@@ -497,12 +504,13 @@ Style "dark" renders text/foreground light on dark background (default is vice v
 
       staticfish(pairs);
 
-      document.getElementById("timer_container").innerHTML = 'Years: 1949-1990';
     };
 
     kokaneefilter.onclick = function(e) {
       featureLayer.clearLayers();
-
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1965-1980';
 
       all.className = '';
       allstatic.className = '';
@@ -519,11 +527,13 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       });
       staticfish(kokaneepairs);
 
-      document.getElementById("timer_container").innerHTML = 'Years: 1965-1980';
     };
 
     rainbowfilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1949-1970';
 
       all.className = '';
       allstatic.className = '';
@@ -538,11 +548,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'rainbow'
       });
       staticfish(rainbowpairs);
-      document.getElementById("timer_container").innerHTML = 'Years: 1949-1970';
+
     };
 
     lakefilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1957-1982';
 
       all.className = '';
       allstatic.className = '';
@@ -557,11 +570,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'lake'
       });
       staticfish(lakepairs);
-      document.getElementById("timer_container").innerHTML = 'Years: 1957-1982';
+
     };
 
     troutfilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1963-1976';
 
       all.className = '';
       allstatic.className = '';
@@ -576,11 +592,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'trout'
       });
       staticfish(troutpairs);
-      document.getElementById("timer_container").innerHTML = 'Years: 1963-1976';
+
     };
 
     kokaneetroutfilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1965-1979';
 
       all.className = '';
       allstatic.className = '';
@@ -595,11 +614,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'kokanee-trout'
       });
       staticfish(kokaneetroutpairs);
-      document.getElementById("timer_container").innerHTML = 'Years: 1965-1979';
+
     };
 
     whitebasssteelheadfilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: 1981';
 
       all.className = '';
       allstatic.className = '';
@@ -614,11 +636,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'whitebass-steelhead'
       });
       staticfish(whitebasssteelheadpairs);
-      document.getElementById("timer_container").innerHTML = 'Years: 1981';
+
     };
 
     unintentionalfilter.onclick = function(e) {
       featureLayer.clearLayers();
+      clearInterval(timer);
+      countUP(1);
+      document.getElementById("timer_container").innerHTML = 'Years: circa 1980';
 
       all.className = '';
       allstatic.className = '';
@@ -633,7 +658,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'unintentional'
       });
       staticfish(unintentionalpairs);
-      document.getElementById("timer_container").innerHTML = 'Years: circa 1980';
+
     };
   </script>
 
