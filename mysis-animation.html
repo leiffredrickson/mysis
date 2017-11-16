@@ -445,9 +445,11 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     var counter = 1945
     var timer;
 
-    function countUP() {
+    function countUP(cancel) {
 
-      if (counter < 1990) {
+      if (cancel == 1) { document.getElementById("timer_container").innerHTML = 'goddammit';
+       }
+      else if (cancel == 0 && counter < 1990) {
         counter = counter + 1;
         //increment the counter by 1, display the new value in the div
         document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
@@ -459,6 +461,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     all.onclick = function() {
       // remove all points and lines
       featureLayer.clearLayers();
+      document.getElementById("timer_container").innerHTML = 'Year: 1945';
+      timer = setInterval("countUP(1)");
 
       // Changes the a tag with the following id class to nothing
       allstatic.className = '';
@@ -473,8 +477,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       this.className = 'active';
 
       showfish(pairs);
-
-      timer = setInterval("countUP()", 1000);
+      //timer = setInterval("countUP(0)", 1000);
 
     };
 
