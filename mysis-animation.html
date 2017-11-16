@@ -149,8 +149,8 @@ so the first line of the file looks like this: data = {-->
 
   <!-- Create navigation bar with menu style above -->
   <nav id='menu-ui' class='menu-ui'>
-    <a href='#' id='filter-all'>All - Animation</a>
-    <a href='#' id='filter-all-static'>All - Static</a>
+    <a href='#' id='filter-all'>Start Animation</a>
+    <a href='#' id="timer_container">Year: 1945</a>
     <a href='#' id='filter-rainbow'>Rainbow Trout</a>
     <a href='#' id='filter-lake'>Lake Trout</a>
     <a href='#' id='filter-trout'>Trout (General)</a>
@@ -158,6 +158,7 @@ so the first line of the file looks like this: data = {-->
     <a href='#' id='filter-kokanee'>Kokanee Salmon</a>
     <a href='#' id='filter-whitebasssteelhead'>White Bass + Steelhead</a>
     <a href='#' id='filter-unintentional'>Unintentional</a>
+    <a href='#' id='filter-all-static'>All Fish</a>
   </nav>
 
   <!-- Create navigation bar with map style above.
@@ -313,7 +314,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         var amount = fishes[i][2][0].amount;
         var year = fishes[i][2][0].year;
         var fish = fishes[i][2][0].fish;
-        var secs = year - 1948;
+        var secs = year - 1945;
 
         var colorChange = '';
         if (fish === "kokanee") {
@@ -388,7 +389,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         var amount = fishes[i][2][0].amount;
         var year = fishes[i][2][0].year;
         var fish = fishes[i][2][0].fish;
-        var secs = year - 1947;
+        var secs = year - 1948;
 
         var colorChange = '';
         if (fish === "kokanee") {
@@ -428,7 +429,6 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       }
     }
 
-
     var all = document.getElementById('filter-all'),
       allstatic = document.getElementById('filter-all-static'),
       kokaneefilter = document.getElementById('filter-kokanee'),
@@ -438,6 +438,21 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter = document.getElementById('filter-kokaneetrout'),
       whitebasssteelheadfilter = document.getElementById('filter-whitebasssteelhead'),
       unintentionalfilter = document.getElementById('filter-unintentional');
+
+
+      // Date counter. Starts at 1945 and counts up one every second, until  1990.
+        var counter = 1945
+        var timer;
+          function countUP () {
+
+            if (counter < 1990) {
+            counter = counter + 1;
+            //increment the counter by 1, display the new value in the div
+            document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
+            }
+            //if counter less than 1990, countup, otherwise
+            else {}
+          }
 
     all.onclick = function() {
       // remove all points and lines
@@ -456,6 +471,9 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       this.className = 'active';
 
       showfish(pairs);
+
+      timer=setInterval("countUP()", 1000 );
+
     };
 
     allstatic.onclick = function() {
@@ -473,6 +491,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       this.className = 'active';
 
       staticfish(pairs);
+
+      document.getElementById("timer_container").innerHTML = 'Year: 1949-1990';
     };
 
     kokaneefilter.onclick = function(e) {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+</head>
+
+
+<body>
+
+  <nav id='menu-ui' class='menu-ui'>
+    <a href='#' id='filter-all'>Start Animation</a>
+    <a href='#' id="timer_container">Year: 1945</a>
+    <a href='#' id='filter-rainbow'>Rainbow Trout</a>
+    <a href='#' id='filter-lake'>Lake Trout</a>
+    <a href='#' id='filter-trout'>Trout (General)</a>
+    <a href='#' id='filter-kokaneetrout'>Kokanee + Trout</a>
+    <a href='#' id='filter-kokanee'>Kokanee Salmon</a>
+    <a href='#' id='filter-whitebasssteelhead'>White Bass + Steelhead</a>
+    <a href='#' id='filter-unintentional'>Unintentional</a>
+    <a href='#' id='filter-all-static'>All Fish</a>
+  </nav>
+
+
+<script>
+
+var all = document.getElementById('filter-all'),
+  allstatic = document.getElementById('filter-all-static'),
+  kokaneefilter = document.getElementById('filter-kokanee'),
+  rainbowfilter = document.getElementById('filter-rainbow'),
+  lakefilter = document.getElementById('filter-lake'),
+  troutfilter = document.getElementById('filter-trout'),
+  kokaneetroutfilter = document.getElementById('filter-kokaneetrout'),
+  whitebasssteelheadfilter = document.getElementById('filter-whitebasssteelhead'),
+  unintentionalfilter = document.getElementById('filter-unintentional');
+
+all.onclick = function(){timer=setInterval("countUP()", 1000 );}
+
+// Date counter. Starts at 1945 and counts up one every second, until  1990.
+  var counter = 1945
+  var timer;
+    function countUP () {
+
+      if (counter < 1990) {
+      counter = counter + 1;
+      //increment the counter by 1, display the new value in the div
+      document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
+      }
+      //if counter less than 1990, countup, otherwise
+      else {}
+    }
+
+  </script>
+
+</body>
+
+</html>
