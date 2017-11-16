@@ -16,7 +16,7 @@ The Mapbox examples drawn on are:
   <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
 
   <style>
-    /*Style for the body using internal CSS*/
+  /*Style for the body using internal CSS*/
 
     body {
       margin: 0;
@@ -37,20 +37,20 @@ The Mapbox examples drawn on are:
       --lake: rgb(35, 110, 158);
       --whitebass-steelhead: rgb(219, 217, 0);
       --unintentional: rgb(0, 133, 29);
-      --rainbow: rgb(241, 101, 0);
+      --rainbow: rgb(255, 107, 0);
       --trout: rgb(36, 45, 251);
       --kokanee-trout: rgb(124, 37, 210);
     }
     /*Style for navigation menu using CSS class attribute (nav element created below and given this CSS class)*/
 
     .menu-ui {
-      background: #fff;
+      background: rgb(240, 237, 228);
       position: absolute;
       top: 10px;
       right: 10px;
       z-index: 1;
       border-radius: 3px;
-      width: 120px;
+      width: 180px;
       border: 2px solid rgba(0, 0, 0, 0.4);
       opacity: 0.9;
     }
@@ -83,7 +83,7 @@ The Mapbox examples drawn on are:
     .menu-ui a:hover {
       font-weight: bolder;
       font-size: 14px;
-        opacity: 1.0;
+      opacity: 1.0;
     }
 
     .menu-ui a.active,
@@ -93,50 +93,48 @@ The Mapbox examples drawn on are:
       font-size: 14px;
       opacity: 1.0;
     }
-
   }
 
   .menu-ui.active {
     opacity: 1.0;
   }
 
-    #filter-kokanee {
-      background-color: var(--kokanee);
-    }
+  #filter-kokanee {
+    background-color: var(--kokanee);
+  }
 
-    #filter-lake {
-      background-color: var(--lake)
-    }
+  #filter-lake {
+    background-color: var(--lake)
+  }
 
-    #filter-whitebasssteelhead {
-      background-color: var(--whitebass-steelhead)
-    }
+  #filter-whitebasssteelhead {
+    background-color: var(--whitebass-steelhead)
+  }
 
-    #filter-unintentional {
-      background-color: var(--unintentional)
-    }
+  #filter-unintentional {
+    background-color: var(--unintentional)
+  }
 
-    #filter-rainbow {
-      background-color: var(--rainbow)
-    }
+  #filter-rainbow {
+    background-color: var(--rainbow)
+  }
 
-    #filter-trout {
-      background-color: var(--trout)
-    }
+  #filter-trout {
+    background-color: var(--trout)
+  }
 
-    #filter-kokaneetrout {
-      background-color: var(--kokanee-trout)
-    }
-    /* The path-start class is added to each line to manage its animation - this interpolates
+  #filter-kokaneetrout {
+    background-color: var(--kokanee-trout)
+  }
+  /* The path-start class is added to each line to manage its animation - this interpolates
 between the starting and ending values for the stroke-dashoffset css property.
 webkit is Chrome and Safari browsers; moz is Mozilla; o is Opera; nothing is Explorer/Edge */
-
-    .path-start {
-      -webkit-transition: stroke-dashoffset 5s ease-in;
-      -moz-transition: stroke-dashoffset 5s ease-in;
-      -o-transition: stroke-dashoffset 5s ease-in;
-      transition: stroke-dashoffset 2s ease-in;
-    }
+  .path-start {
+    -webkit-transition: stroke-dashoffset 5s ease-in;
+    -moz-transition: stroke-dashoffset 5s ease-in;
+    -o-transition: stroke-dashoffset 5s ease-in;
+    transition: stroke-dashoffset 2s ease-in;
+  }
   </style>
 </head>
 
@@ -156,8 +154,8 @@ so the first line of the file looks like this: data = {-->
     <a href='#' id='filter-rainbow'>Rainbow Trout</a>
     <a href='#' id='filter-lake'>Lake Trout</a>
     <a href='#' id='filter-trout'>Trout (General)</a>
-    <a href='#' id='filter-kokanee'>Kokanee</a>
     <a href='#' id='filter-kokaneetrout'>Kokanee + Trout</a>
+    <a href='#' id='filter-kokanee'>Kokanee Salmon</a>
     <a href='#' id='filter-whitebasssteelhead'>White Bass + Steelhead</a>
     <a href='#' id='filter-unintentional'>Unintentional</a>
   </nav>
@@ -336,86 +334,52 @@ Style "dark" renders text/foreground light on dark background (default is vice v
           colorChange = "";
         }
 
-      var weightChange = 3
-      /*var weightChange = '';
-      if (amount < 1000) {
-        weightChange = 1;
-      } else if ( amount > 1000 && amount < 10000 ) {
-        weightChange = 1.1;
-      } else if ( amount > 10000 && amount < 20000 ) {
-        weightChange = 1.2;
-      } else if ( amount > 20000 && amount < 30000 ) {
-        weightChange = 1.3;
-      } else if ( amount > 30000 && amount < 40000 ) {
-        weightChange = 1.4;
-      } else if ( amount > 40000 && amount < 50000 ) {
-        weightChange = 1.5;
-      } else if ( amount > 50000 && amount < 60000 ) {
-        weightChange = 1.6;
-      } else if ( amount > 60000 && amount < 70000 ) {
-        weightChange = 1.7;
-      } else if ( amount > 70000 && amount < 80000 ) {
-        weightChange = 1.8;
-      } else if ( amount > 80000 && amount < 90000 ) {
-        weightChange = 1.9;
-      } else if ( amount > 90000 && amount < 100000 ) {
-        weightChange = 2;
-      } else if ( amount > 100000 && amount < 200000 ) {
-        weightChange = 3;
-      } else if ( amount > 200000 && amount < 300000 ) {
-        weightChange = 4;
-      } else if ( amount > 300000 && amount < 400000 ) {
-        weightChange = 5;
-      } else if ( amount > 400000 ) {
-        weightChange = 10;
-      } else {
-        weightChange = 1;
-      } */
+        var weightChange = 3
 
-      /* Transform each pair of coordinates into a great circle using Arc.js.
-      So below, we are taking the data set passed from the showfish() function.
-      No variable named "fishes" is actually passed in this code, but "pairs"
-      and perhaps other are passed below. For the argument passed, we grab each
-      of the main objects/arrays (lakes) in it iteratively (with [i]),
-      then grab the first and second arrays within those main objects.
-      The obj() function has been defined above as obj(ll) { return { y: ll[0], x: ll[1] }; }
-      So for each of the two arrays grabbed from the lake arrays,
-      it takes the first and second values in the array. Which are lat and long coordinates.
-      It puts these in the form acceptable to arc.js, after they are flipped (see below) */
-      var generator = new arc.GreatCircle(
-        obj(fishes[i][0]),
-        obj(fishes[i][1]));
-      var line = generator.Arc(100, {
-        offset: 10
-      });
-      /* Leaflet expects [lat,lng] arrays, but a lot of software does the opposite,
-      including arc.js, so we flip here. */
-      var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
-          return c.reverse();
-        }), {
-          color: colorChange,
-          weight: weightChange,
-          opacity: 0.4
-        })
-        .addTo(featureLayer);
-      var totalLength = newLine._path.getTotalLength();
-      newLine._path.classList.add('path-start');
-      // This pair of CSS properties hides the line initially
-      // See http://css-tricks.com/svg-line-animation-works/
-      // for details on this trick.
-      newLine._path.style.strokeDashoffset = totalLength;
-      newLine._path.style.strokeDasharray = totalLength;
-      // Offset the timeout here: setTimeout makes a function
-      // run after a certain number of milliseconds - in this
-      // case we want each flight path to be staggered a bit.
-      setTimeout((function(path) {
-        return function() {
-          // setting the strokeDashoffset to 0 triggers
-          // the animation.
-          path.style.strokeDashoffset = 0;
-        };
-      })(newLine._path), secs * 1000);
-    }
+        /* Transform each pair of coordinates into a great circle using Arc.js.
+        So below, we are taking the data set passed from the showfish() function.
+        No variable named "fishes" is actually passed in this code, but "pairs"
+        and perhaps other are passed below. For the argument passed, we grab each
+        of the main objects/arrays (lakes) in it iteratively (with [i]),
+        then grab the first and second arrays within those main objects.
+        The obj() function has been defined above as obj(ll) { return { y: ll[0], x: ll[1] }; }
+        So for each of the two arrays grabbed from the lake arrays,
+        it takes the first and second values in the array. Which are lat and long coordinates.
+        It puts these in the form acceptable to arc.js, after they are flipped (see below) */
+        var generator = new arc.GreatCircle(
+          obj(fishes[i][0]),
+          obj(fishes[i][1]));
+        var line = generator.Arc(100, {
+          offset: 10
+        });
+        /* Leaflet expects [lat,lng] arrays, but a lot of software does the opposite,
+        including arc.js, so we flip here. */
+        var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+            return c.reverse();
+          }), {
+            color: colorChange,
+            weight: weightChange,
+            opacity: 0.4
+          })
+          .addTo(featureLayer);
+        var totalLength = newLine._path.getTotalLength();
+        newLine._path.classList.add('path-start');
+        // This pair of CSS properties hides the line initially
+        // See http://css-tricks.com/svg-line-animation-works/
+        // for details on this trick.
+        newLine._path.style.strokeDashoffset = totalLength;
+        newLine._path.style.strokeDasharray = totalLength;
+        // Offset the timeout here: setTimeout makes a function
+        // run after a certain number of milliseconds - in this
+        // case we want each flight path to be staggered a bit.
+        setTimeout((function(path) {
+          return function() {
+            // setting the strokeDashoffset to 0 triggers
+            // the animation.
+            path.style.strokeDashoffset = 0;
+          };
+        })(newLine._path), secs * 1000);
+      }
     } /* This is the end of the showfish(fishes) function*/
 
     function staticfish(fishes) {
@@ -424,7 +388,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         var amount = fishes[i][2][0].amount;
         var year = fishes[i][2][0].year;
         var fish = fishes[i][2][0].fish;
-        var secs = year - 1948;
+        var secs = year - 1947;
 
         var colorChange = '';
         if (fish === "kokanee") {
@@ -445,40 +409,41 @@ Style "dark" renders text/foreground light on dark background (default is vice v
           colorChange = "";
         }
 
-      var weightChange = 3
+        var weightChange = 3
 
-      var generator = new arc.GreatCircle(
-        obj(fishes[i][0]),
-        obj(fishes[i][1]));
-      var line = generator.Arc(100, {
-        offset: 10
-      });
-      var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
-          return c.reverse();
-        }), {
-          color: colorChange,
-          weight: weightChange,
-          opacity: 0.4
-        })
-        .addTo(featureLayer);
-    }
+        var generator = new arc.GreatCircle(
+          obj(fishes[i][0]),
+          obj(fishes[i][1]));
+        var line = generator.Arc(100, {
+          offset: 10
+        });
+        var newLine = L.polyline(line.geometries[0].coords.map(function(c) {
+            return c.reverse();
+          }), {
+            color: colorChange,
+            weight: weightChange,
+            opacity: 0.4
+          })
+          .addTo(featureLayer);
+      }
     }
 
 
     var all = document.getElementById('filter-all'),
       allstatic = document.getElementById('filter-all-static'),
-      kokaneefilter = document.getElementById('filter-kokanee');
-      rainbowfilter = document.getElementById('filter-rainbow');
-      lakefilter = document.getElementById('filter-lake');
-      troutfilter = document.getElementById('filter-trout');
-      kokaneetroutfilter = document.getElementById('filter-kokaneetrout');
-      whitebasssteelheadfilter = document.getElementById('filter-whitebasssteelhead');
+      kokaneefilter = document.getElementById('filter-kokanee'),
+      rainbowfilter = document.getElementById('filter-rainbow'),
+      lakefilter = document.getElementById('filter-lake'),
+      troutfilter = document.getElementById('filter-trout'),
+      kokaneetroutfilter = document.getElementById('filter-kokaneetrout'),
+      whitebasssteelheadfilter = document.getElementById('filter-whitebasssteelhead'),
       unintentionalfilter = document.getElementById('filter-unintentional');
 
     all.onclick = function() {
       // remove all points and lines
       featureLayer.clearLayers();
 
+      // Changes the a tag with the following id class to nothing
       allstatic.className = '';
       kokaneefilter.className = '';
       rainbowfilter.className = '';
@@ -487,13 +452,14 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
+      // Make only "this" class ("all") active
       this.className = 'active';
 
       showfish(pairs);
     };
 
     allstatic.onclick = function() {
-      // remove all points and lines
+
       featureLayer.clearLayers();
 
       all.className = '';
@@ -510,10 +476,9 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     kokaneefilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
+
       all.className = '';
       allstatic.className = '';
       rainbowfilter.className = '';
@@ -522,7 +487,6 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
       // find only the kokanee
       var kokaneepairs = pairs.filter(function(obj) {
@@ -532,10 +496,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     rainbowfilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -544,9 +506,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var rainbowpairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'rainbow'
       });
@@ -554,10 +514,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     lakefilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -566,9 +524,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var lakepairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'lake'
       });
@@ -576,10 +532,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     troutfilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -588,9 +542,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var troutpairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'trout'
       });
@@ -598,10 +550,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     kokaneetroutfilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -610,9 +560,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       troutfilter.className = '';
       whitebasssteelheadfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var kokaneetroutpairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'kokanee-trout'
       });
@@ -620,10 +568,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
     };
 
     whitebasssteelheadfilter.onclick = function(e) {
-      // remove all points and lines
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -632,20 +578,16 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       troutfilter.className = '';
       kokaneetroutfilter.className = '';
       unintentionalfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var whitebasssteelheadpairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'whitebass-steelhead'
       });
       staticfish(whitebasssteelheadpairs);
     };
 
-  unintentionalfilter.onclick = function(e) {
-      // remove all points and lines
+    unintentionalfilter.onclick = function(e) {
       featureLayer.clearLayers();
 
-      // Changes the a tag with id 'filter-all' class to nothing
       all.className = '';
       allstatic.className = '';
       kokaneefilter.className = '';
@@ -654,15 +596,12 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       troutfilter.className = '';
       kokaneetroutfilter.className = '';
       whitebasssteelheadfilter.className = '';
-      // Changes the a tag with id 'filter-kokanee' class to 'active'
       this.className = 'active';
-      // find only the kokanee
       var unintentionalpairs = pairs.filter(function(obj) {
         return obj[2][0].fish === 'unintentional'
       });
       staticfish(unintentionalpairs);
     };
-
   </script>
 
 
