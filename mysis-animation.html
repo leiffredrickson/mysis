@@ -55,7 +55,8 @@ The Mapbox examples drawn on are:
       opacity: 0.9;
     }
 
-    .menu-ui a {
+    .menu-ui a,
+    .menu-ui p {
       font-family: sans-serif;
       font-size: 13px;
       font-weight: bold;
@@ -149,8 +150,8 @@ so the first line of the file looks like this: data = {-->
 
   <!-- Create navigation bar with menu style above -->
   <nav id='menu-ui' class='menu-ui'>
+    <p href='#' id="timer_container" style="font-size:18px; color:rgb(99, 27, 27)">Year: 1945</p>
     <a href='#' id='filter-all'>Start Animation</a>
-    <a href='#' id="timer_container">Year: 1945</a>
     <a href='#' id='filter-rainbow'>Rainbow Trout</a>
     <a href='#' id='filter-lake'>Lake Trout</a>
     <a href='#' id='filter-trout'>Trout (General)</a>
@@ -440,19 +441,20 @@ Style "dark" renders text/foreground light on dark background (default is vice v
       unintentionalfilter = document.getElementById('filter-unintentional');
 
 
-      // Date counter. Starts at 1945 and counts up one every second, until  1990.
-        var counter = 1945
-        var timer;
-          function countUP () {
+    // Date counter. Starts at 1945 and counts up one every second, until  1990.
+    var counter = 1945
+    var timer;
 
-            if (counter < 1990) {
-            counter = counter + 1;
-            //increment the counter by 1, display the new value in the div
-            document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
-            }
-            //if counter less than 1990, countup, otherwise
-            else {}
-          }
+    function countUP() {
+
+      if (counter < 1990) {
+        counter = counter + 1;
+        //increment the counter by 1, display the new value in the div
+        document.getElementById("timer_container").innerHTML = 'Year: ' + counter;
+      }
+      //if counter less than 1990, countup, otherwise
+      else {}
+    }
 
     all.onclick = function() {
       // remove all points and lines
@@ -472,7 +474,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
 
       showfish(pairs);
 
-      timer=setInterval("countUP()", 1000 );
+      timer = setInterval("countUP()", 1000);
 
     };
 
@@ -492,7 +494,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
 
       staticfish(pairs);
 
-      document.getElementById("timer_container").innerHTML = 'Year: 1949-1990';
+      document.getElementById("timer_container").innerHTML = 'Years: 1949-1990';
     };
 
     kokaneefilter.onclick = function(e) {
@@ -513,6 +515,8 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'kokanee'
       });
       staticfish(kokaneepairs);
+
+      document.getElementById("timer_container").innerHTML = 'Years: 1965-1980';
     };
 
     rainbowfilter.onclick = function(e) {
@@ -531,6 +535,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'rainbow'
       });
       staticfish(rainbowpairs);
+      document.getElementById("timer_container").innerHTML = 'Years: 1949-1970';
     };
 
     lakefilter.onclick = function(e) {
@@ -549,6 +554,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'lake'
       });
       staticfish(lakepairs);
+      document.getElementById("timer_container").innerHTML = 'Years: 1957-1982';
     };
 
     troutfilter.onclick = function(e) {
@@ -567,6 +573,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'trout'
       });
       staticfish(troutpairs);
+      document.getElementById("timer_container").innerHTML = 'Years: 1963-1976';
     };
 
     kokaneetroutfilter.onclick = function(e) {
@@ -585,6 +592,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'kokanee-trout'
       });
       staticfish(kokaneetroutpairs);
+      document.getElementById("timer_container").innerHTML = 'Years: 1965-1979';
     };
 
     whitebasssteelheadfilter.onclick = function(e) {
@@ -603,6 +611,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'whitebass-steelhead'
       });
       staticfish(whitebasssteelheadpairs);
+      document.getElementById("timer_container").innerHTML = 'Years: 1981';
     };
 
     unintentionalfilter.onclick = function(e) {
@@ -621,6 +630,7 @@ Style "dark" renders text/foreground light on dark background (default is vice v
         return obj[2][0].fish === 'unintentional'
       });
       staticfish(unintentionalpairs);
+      document.getElementById("timer_container").innerHTML = 'Years: circa 1980';
     };
   </script>
 
